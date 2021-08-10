@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="procesamiento_nomina_restriccion_por_compania" model="ir.rule">
+        <field name="name">procesamiento.nomina.restriccion.por.compania</field>
+        <field name="model_id" ref="model_hr_payslip_run"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+</odoo>

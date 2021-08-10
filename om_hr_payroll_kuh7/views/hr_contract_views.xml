@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="om_hr_payroll.menu_hr_payroll_root" web_icon="om_hr_payroll_kuh7,static/description/icon.png"/>
+
+</odoo>

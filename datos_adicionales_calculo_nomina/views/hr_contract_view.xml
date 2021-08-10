@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="hr_contract_form_aditional_fields_kuh7" model="ir.ui.view">
+        <field name="name">hr.contract.aditional.data.kuh7</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="nomina_cfdi_ee.hr_contract_view_form_nomina_cfdi"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='percepcion_adicional_amount']" position="after">
+                <field name="support"/>
+                <field name="bond" />
+                <field name="viatics" />
+                <field name="info_withholding_refund" />
+                <field name="gratification" />
+            </xpath>
+            <xpath expr="//field[@name='deduccion_adicional_amount']" position="after">
+                <field name="breakdowms" />
+                <field name="bail" />
+                <field name="contingency_descount" />
+                <field name="personal_loan" />
+            </xpath>
+            <xpath expr="//field[@name='prima_dominical']" position="after">
+                <field name="dominical_bonus" />
+                <field name="vacation_bonus" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="hr_payslip_run_inherit_form">
+        <field name="name">hr.payslip.run.form.inherit</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="inherit_id" ref="om_hr_payroll.hr_payslip_run_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='export_report_xlsx_button']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='state']" position="before">
+                <button name="download_list_payslip_1" type="object" string="Listado de nómina"/>
+                <button name="download_list_payslip_by_depto" type="object" string="Listado de nómina por depto"/>
+                <button name="download_list_payslip_exentos_gravados" type="object" string="Listado de nómina exentos y gravados"/>
+                <!--<button name="download_list_payslip_1" type="object" string="Listado de nómina Aldo (Excel)"/>-->
+            </xpath>
+        </field>
+    </record>
+</odoo>

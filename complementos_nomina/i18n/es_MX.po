@@ -1,0 +1,507 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* manage_complement_payslip
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-21 14:42+0000\n"
+"PO-Revision-Date: 2021-04-21 14:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.cfdi_payroll_layout
+msgid "&amp;bull;"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong> Nombre</strong>:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong> Puesto</strong>:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>CURP</strong>:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Cadena Original del Complemento digital del SAT</strong> <br/>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Datos de la nómina</strong>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Depto.</strong>:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid ""
+"<strong>ESTE DOCUMENTO ES UNA REPRESENTACIÓN IMPRESA DE UN CFDI</strong>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Emisor</strong>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Fecha de ingreso</strong>:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Fecha emisión: </strong>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Fecha y Hora de Certificación</strong>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Firma del empleado</strong>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Folio fiscal</strong><br/>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Folio:</strong>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Forma de pago</strong><br/>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Jornada</strong>:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Lugar de expedición: </strong>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Método de pago</strong><br/>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>No. de Serie del Certificado Emisor</strong>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>No. de Serie del Certificado del SAT</strong>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Número de empleado</strong>:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Periodicidad de pago</strong>:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Periodo: </strong>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>RFC</strong>:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Receptor</strong>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Registro Patronal</strong>:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Salario integrado</strong>:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Seguro social</strong>:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Sello del SAT</strong><br/>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Sello digital del CFDI</strong><br/>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Tipo de comprobante</strong><br/>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Total de días pagados</strong>:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "<strong>Uso CFDI(cliente)</strong><br/>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__active_update_year
+msgid "Active update year"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.view_hr_payslip_form_kuh7_new_fields
+msgid "Acumulado incapacidad interna"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__anniversary_year
+msgid "Anniversary year"
+msgstr "Semana aniversario"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__antiquity_years
+msgid "Antiquity years"
+msgstr "Años de antiguedad"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__apply_bonus_automatically
+msgid "Apply bonus automatically"
+msgstr "Desactivar prestaciones automáticas"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields.selection,name:manage_complement_payslip.selection__hr_employee__certificate_dos__master
+msgid "Bachillerato"
+msgstr "Bachillerato"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_employee__certificate_dos
+msgid "Certificate Level"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.cfdi_payroll_layout
+msgid "Correo Electrónico:"
+msgstr "Correo Electrónico:"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__days_intern_inability
+msgid "Days intern inability"
+msgstr "Días incapacidad"
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "Deducciones"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_employee_loan__display_name
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__display_name
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_payslip__display_name
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_payslip_input__display_name
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_payslip_run__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields.selection,name:manage_complement_payslip.selection__hr_employee__certificate_dos__doctor
+msgid "Doctorado"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "Días"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model,name:manage_complement_payslip.model_hr_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: manage_complement_payslip
+#: model:ir.model,name:manage_complement_payslip.model_hr_contract
+msgid "Employee Contract"
+msgstr "Contrato de empleado"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_payslip_run__first_payslip_month
+msgid "First payslip of month"
+msgstr "Primera nómina del mes"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__first_week_month
+msgid "First week month"
+msgstr "Primera semana del mes"
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.cfdi_payroll_layout
+msgid "Hoja: <span class=\"page\"/> / <span class=\"topage\"/>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_employee_loan__id
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__id
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_employee__id
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_payslip__id
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_payslip_input__id
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_payslip_run__id
+msgid "ID"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.actions.report,name:manage_complement_payslip.report_payslips_2
+msgid "Imprimir Nomina x2"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__intern_inability
+msgid "Intern inability"
+msgstr "Incapacidad interna"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_employee_loan____last_update
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract____last_update
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_payslip____last_update
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_payslip_input____last_update
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_payslip_run____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__last_year_update
+msgid "Last year update"
+msgstr "Último actualización del año"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields.selection,name:manage_complement_payslip.selection__hr_employee__certificate_dos__graduate
+msgid "Licenciatura"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.hr_payslip_run_inherit_form
+msgid "Listado de nómina (Excel)"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__loyalty_bonus
+msgid "Loyalty Bonus"
+msgstr "Bono de lealtad"
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "Neto a pagar:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_payslip__no_empleado
+msgid "Número de empleado"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields.selection,name:manage_complement_payslip.selection__hr_employee__certificate_dos__other
+msgid "Otro"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "Otros pagos"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.view_hr_contract_cfdi_new_fields
+msgid "Pagar vales de despensa"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model,name:manage_complement_payslip.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Nómina"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__pay_attendance_bonus
+msgid "Pay attendance bonus"
+msgstr "Pagar premio asistencia"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__pay_pantry_vouchers
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_payslip_run__pay_pantry_vouchers
+msgid "Pay pantry vouchers"
+msgstr "Pagar vales de despensa"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_employee_loan__payroll_number_employee
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__payroll_number_employee
+msgid "Payroll number employee"
+msgstr "Número de nómina"
+
+#. module: manage_complement_payslip
+#: model:ir.model,name:manage_complement_payslip.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "Procesamientos de nóminas"
+
+#. module: manage_complement_payslip
+#: model:ir.model,name:manage_complement_payslip.model_hr_payslip_input
+msgid "Payslip Input"
+msgstr "Entrada de nómina"
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "Percepciones"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_payslip__acum_incap_inte
+msgid "Percepciones gravadas"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_employee__phone_two
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__porcentage_intern_inability
+msgid "Porcentage intern inability"
+msgstr "Porcentaje incapacidad"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields.selection,name:manage_complement_payslip.selection__hr_employee__certificate_dos__basics
+msgid "Primaria"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.cfdi_payroll_layout
+msgid "Página web:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__quality_bonus
+msgid "Quality Bonus ($)"
+msgstr "Bono de calidad ($)"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_contract__laundry_bonus
+msgid "Quality Laundry"
+msgstr "Bono lavandería"
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "Recibo de nómina"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid ""
+"Recibí de esta empresa la cantidad que señala este recibo de pago, estando conforme con las\n"
+"                    percepciones y las retenciones descritas, por lo que certifico que no se me adeuda cantidad alguna\n"
+"                    por ningún concepto. <br/> <br/>"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_employee__registro_patronal
+msgid "Registro patronal"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_payslip_input__salary_rule_id
+msgid "Salary rule"
+msgstr "Concepto"
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields.selection,name:manage_complement_payslip.selection__hr_employee__certificate_dos__bachelor
+msgid "Secundaria"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.cfdi_payroll_layout
+msgid "Teléfono:"
+msgstr "Teléfono:"
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "Total"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "Total de deducciones:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "Total de otros pagos:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "Total de percepciones:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "Total:"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model.fields,field_description:manage_complement_payslip.field_hr_employee__work_location
+msgid "Work Location"
+msgstr "Ubicación de trabajo"
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "______________________________"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model_terms:ir.ui.view,arch_db:manage_complement_payslip.report_payslip_document
+msgid "diario"
+msgstr ""
+
+#. module: manage_complement_payslip
+#: model:ir.model,name:manage_complement_payslip.model_employee_loan
+msgid "employee_loan"
+msgstr ""

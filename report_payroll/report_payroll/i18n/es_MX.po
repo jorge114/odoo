@@ -1,0 +1,255 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* report_payroll
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-06 23:26+0000\n"
+"PO-Revision-Date: 2021-01-06 23:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_aditional_hours
+msgid "<span>Doble</span>"
+msgstr ""
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_inability
+msgid "<span>N/A</span>"
+msgstr ""
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_aditional_hours
+msgid "<span>Simple</span>"
+msgstr ""
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_aditional_hours
+msgid "<span>Triple</span>"
+msgstr ""
+
+#. module: report_payroll
+#: model:ir.model.fields,field_description:report_payroll.field_hr_employee__aditional_hour_ids
+msgid "Aditional Hours Payroll"
+msgstr ""
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_inability
+msgid "Control"
+msgstr ""
+
+#. module: report_payroll
+#: model:ir.model.fields,field_description:report_payroll.field_hr_employee__delays_ids
+msgid "Delays Payroll"
+msgstr ""
+
+#. module: report_payroll
+#: model:ir.model.fields,field_description:report_payroll.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:report_payroll.field_hr_payslip_run__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_inability
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_incidents_fouls
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_vacations
+msgid "Días"
+msgstr "Días"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_vacations
+msgid "Días disponibles"
+msgstr "Días disponibles"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_aditional_hours
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_delays
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_holiday_day
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_inability
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_incidents_fouls
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_vacations
+msgid "Empleado"
+msgstr "Empleado"
+
+#. module: report_payroll
+#: model:ir.model,name:report_payroll.model_hr_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_aditional_hours
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_delays
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_holiday_day
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_inability
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_incidents_fouls
+msgid "Fecha"
+msgstr "Fecha"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_vacations
+msgid "Fecha inicial"
+msgstr "Fecha inicial"
+
+#. module: report_payroll
+#: model:ir.model.fields,field_description:report_payroll.field_hr_payslip_run__first_payslip_month
+msgid "First payslip of month"
+msgstr "Primera nómina del mes"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_inability
+msgid "Folio"
+msgstr "Folio"
+
+#. module: report_payroll
+#: model:ir.model.fields,field_description:report_payroll.field_hr_employee__fouls_employee_ids
+msgid "Fouls Payroll"
+msgstr "Faltas Nómina"
+
+#. module: report_payroll
+#: model:ir.model.fields,field_description:report_payroll.field_hr_employee__holidays_days_ids
+msgid "Holiday Days Payroll"
+msgstr "Días Feriados Nómina"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_aditional_hours
+msgid "Horas"
+msgstr "Horas"
+
+#. module: report_payroll
+#: model:ir.model.fields,field_description:report_payroll.field_hr_employee__id
+#: model:ir.model.fields,field_description:report_payroll.field_hr_payslip_run__id
+msgid "ID"
+msgstr "ID"
+
+#. module: report_payroll
+#: model:ir.model.fields,field_description:report_payroll.field_hr_employee__inability_ids
+msgid "Inability Payroll"
+msgstr "Incapacidades Nómina"
+
+#. module: report_payroll
+#: model:ir.model.fields,field_description:report_payroll.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:report_payroll.field_hr_payslip_run____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: report_payroll
+#: model:ir.model,name:report_payroll.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "Procesamientos de nóminas"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_aditional_hours
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_delays
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_holiday_day
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_inability
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_incidents_fouls
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_vacations
+msgid "Periodo de nómina :"
+msgstr "Periodo de nómina :"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_inability
+msgid "Porcentaje"
+msgstr "Porcentaje"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_incidents_fouls
+msgid "REPORTE DE FALTAS"
+msgstr "REPORTE DE FALTAS"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_holiday_day
+msgid "REPORTE DE INCIDENCIAS DE DIAS FERIADOS"
+msgstr "REPORTE DE INCIDENCIAS DE DIAS FERIADOS"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_aditional_hours
+msgid "REPORTE DE INCIDENCIAS DE HORAS EXTRA"
+msgstr "REPORTE DE INCIDENCIAS DE HORAS EXTRA"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_inability
+msgid "REPORTE DE INCIDENCIAS DE INCAPACIDADES"
+msgstr "REPORTE DE INCIDENCIAS DE INCAPACIDADES"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_delays
+msgid "REPORTE DE INCIDENCIAS DE RETARDOS"
+msgstr "REPORTE DE INCIDENCIAS DE RETARDOS"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_vacations
+msgid "REPORTE DE INCIDENCIAS DE VACACIONES"
+msgstr "REPORTE DE INCIDENCIAS DE VACACIONES"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_inability
+msgid "Rama de seguro"
+msgstr "Rama de seguro"
+
+#. module: report_payroll
+#: model:ir.actions.report,name:report_payroll.report_print_incidents_holiday_days
+msgid "Reporte Incidencias (Días Festivos)"
+msgstr "Reporte Incidencias (Días Festivos)"
+
+#. module: report_payroll
+#: model:ir.actions.report,name:report_payroll.report_print_incidents_fouls
+msgid "Reporte Incidencias (Faltas)"
+msgstr "Reporte Incidencias (Faltas)"
+
+#. module: report_payroll
+#: model:ir.actions.report,name:report_payroll.report_print_incidents_ah
+msgid "Reporte Incidencias (Horas Extra)"
+msgstr "Reporte Incidencias (Horas Extra)"
+
+#. module: report_payroll
+#: model:ir.actions.report,name:report_payroll.report_print_incident_inability
+msgid "Reporte Incidencias (Incapacidades)"
+msgstr ""
+
+#. module: report_payroll
+#: model:ir.actions.report,name:report_payroll.report_print_incidents_delays
+msgid "Reporte Incidencias (Retardos)"
+msgstr "Reporte Incidencias (Retardos)"
+
+#. module: report_payroll
+#: model:ir.actions.report,name:report_payroll.report_print_incidents_vac
+msgid "Reporte Incidencias (Vacaciones)"
+msgstr "Reporte Incidencias (Vacaciones)"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_inability
+msgid "Secuela"
+msgstr "Secuela"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_holiday_day
+msgid "Tipo"
+msgstr "Tipo"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_incidents_fouls
+msgid "Tipo de falta"
+msgstr "Tipo de falta"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_aditional_hours
+msgid "Tipo de horas extra"
+msgstr "Tipo de horas extra"
+
+#. module: report_payroll
+#: model_terms:ir.ui.view,arch_db:report_payroll.report_inability
+msgid "Tipo de riesgo"
+msgstr "Tipo de riesgo"
+
+#. module: report_payroll
+#: model:ir.model.fields,field_description:report_payroll.field_hr_employee__vacations_ids
+msgid "Vacation Payroll"
+msgstr "Vacaciones Nómina"

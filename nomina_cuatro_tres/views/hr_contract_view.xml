@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <record id="hr_contract_view_form_nomina_cuatro" model="ir.ui.view">
+        <field name="name">hr.contract.nomina43</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="nomina_cfdi_ee.hr_contract_view_form_nomina_cfdi"/>
+        <field name="arch" type="xml">
+               <xpath expr="//field[@name='tipo_prima_vacacional']" position="after">
+                    <field name="tipo_semana" attrs="{'invisible':[('periodicidad_pago','!=','02')]}"/>
+               </xpath>
+        </field>
+    </record>
+</odoo>

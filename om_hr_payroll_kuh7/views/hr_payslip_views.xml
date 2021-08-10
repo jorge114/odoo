@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hr_payslip_run_form_inherit_om_hr_payroll_kuh7" model="ir.ui.view">
+         <field name="name">hr.payslip.run.form.inherit.om.hr.payroll.kuh7</field>
+         <field name="model">hr.payslip.run</field>
+         <field name="inherit_id" ref="om_hr_payroll.hr_payslip_run_form"/>
+         <field name="arch" type="xml">
+             <xpath expr="//button[@name='close_payslip_run']" position="attributes">
+                <attribute name="states">draft,done</attribute>
+            </xpath>
+         </field>
+    </record>
+
+</odoo>
