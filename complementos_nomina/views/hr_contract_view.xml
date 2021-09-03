@@ -11,17 +11,17 @@
             </xpath>
             <xpath expr="//field[@name='date_end']" position="after">
                 <field name="antiquity_years"  attrs="{'invisible': [('antiquity_years', '=', 0)]}" />
-                <field name="anniversary_year" />
+                <field name="anniversary_year" invisible="1" />
             </xpath>
             <xpath expr="//field[@name='structure_type_id']" position="after">
-                <field name="first_week_month" />
-                <field name="pay_attendance_bonus" />
+                <field name="first_week_month" invisible="1" />
+                <field name="pay_attendance_bonus" invisible="1" />
                 <!-- comentar si aun no esta lista la prueba -->
                 <field name="last_year_update" invisible="1"/>
                 <field name="active_update_year" invisible="1" />
             </xpath>
             <xpath expr="//field[@name='hr_responsible_id']" position="after">
-                <field name="apply_bonus_automatically" />
+                <field name="apply_bonus_automatically" invisible="1" />
             </xpath>
             <xpath expr="//field[@name='infonavit_porc']" position="after">
                 <field name="infonavit_mov_perm"/>
@@ -52,17 +52,17 @@
         <field name="inherit_id" ref="nomina_cfdi_ee.hr_contract_view_form_nomina_cfdi"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='percepcion_adicional_amount']" position="after">
-                <field name="quality_bonus" />
-                <field name="laundry_bonus" />
-                <field name="loyalty_bonus" force_save="1"/>
+                <field name="quality_bonus" invisible="1" />
+                <field name="laundry_bonus" invisible="1" />
+                <field name="loyalty_bonus" invisible="1" force_save="1"/>
             </xpath>
             <xpath expr="//field[@name='deduccion_adicional_amount']" position="after">
-                <field name="intern_inability" />
+                <field name="intern_inability" invisible="1" />
                 <field name="days_intern_inability" attrs="{'invisible' : [('intern_inability','=',False)], 'required': [('intern_inability', '=', True)]}" />
                 <field name="porcentage_intern_inability" attrs="{'invisible' : [('intern_inability','=',False)], 'required': [('intern_inability', '=', True)]}" />
             </xpath>
             <xpath expr="//field[@name='sueldo_base_cotizacion']" position="after">
-                <field name="pay_pantry_vouchers" string="Pagar vales de despensa"/>
+                <field name="pay_pantry_vouchers" invisible="1" string="Pagar vales de despensa"/>
             </xpath>
         </field>
     </record>

@@ -15,7 +15,7 @@
     ''',
     "website": "http://kuh7.mx",
     'author': 'Kuh7 Soluciones S.A. de C.V.',
-    'version': '1.7',
+    'version': '1.8',
     'category': 'employees',
     'depends': [
         'nomina_cfdi_ee',

@@ -297,7 +297,7 @@ class HrPayslipRun(models.Model):
         grand_total = {}
         company_name = self.company_id.name
         for dept in self.env['hr.employee'].browse(payslip_group_by_payslip_number.keys()).sorted(lambda x: x.no_empleado):
-            #company_name = self.company_id.name
+            company_name = self.company_id.name
             # row += 1
             # worksheet.write_merge(row, row, 0, 5, dept.name, text_bold_left)
             total = {}

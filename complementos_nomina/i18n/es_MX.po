@@ -833,7 +833,7 @@ msgstr "Pagar vales de despensa"
 #: model:ir.model.fields,field_description:complementos_nomina.field_employee_loan__payroll_number_employee
 #: model:ir.model.fields,field_description:complementos_nomina.field_hr_contract__payroll_number_employee
 msgid "Payroll number employee"
-msgstr "Número de nómina del empleado"
+msgstr "Número de  empleado"
 
 #. module: complementos_nomina
 #: model:ir.model,name:complementos_nomina.model_hr_payslip_run
