@@ -34,21 +34,19 @@ class HrPayslipEmployees(models.TransientModel):
 
     @api.onchange('employee_ids', 'fch_fin')
     def _onchange_employee_ids(self):
-        linea = []
-        _logger.error('periodicidad: %s', self.periodicidad_pago)
-        contract_ids = self.env['hr.contract'].search([
-            ('fch_antiguedad', '<=', self.fch_fin),
-            ('periodicidad_pago', '=', self.periodicidad_pago)
-        ])
-        _logger.error('contra: %s', contract_ids)
-        for contract_id in contract_ids:
-            if not contract_id.date_end:
-                if contract_id.employee_id.id not in linea:
-                    linea.append(contract_id.employee_id.id)
-            else:
-                # if contract_id.date_end >= self.fch_inicio:
-                if contract_id.date_end >= self.fch_fin:
+        if self.periodicidad_pago and self.periodicidad_pago != '99':
+            linea = []
+            contract_ids = self.env['hr.contract'].search([
+                ('fch_antiguedad', '<=', self.fch_fin),
+                ('periodicidad_pago', '=', self.periodicidad_pago)
+            ])
+            for contract_id in contract_ids:
+                if not contract_id.date_end:
                     if contract_id.employee_id.id not in linea:
                         linea.append(contract_id.employee_id.id)
-        dynamic_domain = {'employee_ids': [('id', 'in', linea)]}
-        return {'domain': dynamic_domain}
+                else:
+                    if contract_id.date_end >= self.fch_fin:
+                        if contract_id.employee_id.id not in linea:
+                            linea.append(contract_id.employee_id.id)
+            dynamic_domain = {'employee_ids': [('id', 'in', linea)]}
+            return {'domain': dynamic_domain}
