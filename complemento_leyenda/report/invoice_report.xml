@@ -1,0 +1,38 @@
+<odoo>
+        <!-- Inherit quotation report (from module sale) -->
+        <template id="complemento_leyenda" inherit_id="cdfi_invoice.report_invoice_inherit_cdfi">
+        <!-- Finds the first table with as class table table-condensed and gives the ability to modify it
+         This will replace everything withing tr (including tr)-->
+        <xpath expr="//div[@name='cadenas']" position="before">
+            <t t-if="o.leyenda">
+				<br/> Complemento leyenda
+					<div class="row" style="border:solid 2px black;font-size:13px;">
+						<table class="borderless" cellspacing="0"  style="width:100%;border:none;border-collapse:separate;border-spacing: 2px;">
+							<tr>
+								<td>
+									<strong>Disposición fiscal</strong>
+								</td>
+								<td >
+									<span t-field="o.company_id.disposicionfiscal" />
+								</td>
+								<td>
+									<strong>Norma</strong>
+								</td>
+								<td >
+									<span t-field="o.company_id.norma" />
+								</td>
+							</tr>
+							<tr>
+								<td >
+									<strong>Texto leyenda</strong>
+								</td>
+								<td colspan="3">
+									<span t-field="o.company_id.textoleyenda" />
+								</td>
+							</tr>
+						</table>
+					</div>
+            </t>
+        </xpath>
+        </template>
+</odoo>

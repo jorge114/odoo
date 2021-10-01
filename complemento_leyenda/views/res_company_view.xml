@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="company_leyenda" model="ir.ui.view">
+            <field name="name">res.company.form.inherit</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[1]" position="after">
+                    <page name="leyenda" string="Leyenda">
+                    <group>
+                        <field name="disposicionfiscal"/>
+                        <field name="norma"/>
+                        <field name="textoleyenda"/>
+                    </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
