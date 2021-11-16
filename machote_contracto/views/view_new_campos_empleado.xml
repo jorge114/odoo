@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="hr_employee_form_direccion" model="ir.ui.view">
+            <field name="name">hr.employee_form_direccion</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='address_home_id']" position="replace">
+                    <field name="address_home_id"
+                           context="{ 'show_address': 1, 'default_type': 'private', 'form_view_ref': 'base.res_partner_view_form_private'}"
+                           options='{"always_reload": True, "highlight_first_line": True}'
+                    invisible="1"/>
+                </xpath>
+
+                <xpath expr="//field[@name='address_home_id']" position="before">
+                    <field name="calle" string="Calle"/>
+                    <field name="numero" string="Número"/>
+                    <field name="colonia" string="Colonia"/>
+                    <field name="ciudad" string="Ciudad"/>
+                    <field name="estado_mx" string="Estado"/>
+                    <field name="codigo_postal" string="Codigo Postal"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

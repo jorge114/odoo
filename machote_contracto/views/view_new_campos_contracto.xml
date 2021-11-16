@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="hr_contract_form_datos_contracto" model="ir.ui.view">
+            <field name="name">hr.contract_datos.contracto</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group" position="inside">
+                    <group string="Datos de Contracto">
+                        <field name="tipo_contracto" string="Tipo de Contracto"/>
+                        <field name="tiempo_contracto" string="Tiempo de Contracto"/>
+                        <field name="edad_empleado" string="Edad de Empleado"/>
+                        <field name="testigo1" string="Testigo 1"/>
+                        <field name="testigo2" string="Testigo 2"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

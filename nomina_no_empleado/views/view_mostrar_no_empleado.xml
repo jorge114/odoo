@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hr_payslip_tree_inherit_nomina_cfdi_kuh7" model="ir.ui.view">
+            <field name="name">view.hr.payslip.tree.inherit.nomina.cfdi.kuh7</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="om_hr_payroll.view_hr_payslip_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='number']" position="after">
+                    <field name="no_empleado" string="No. Empleado"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

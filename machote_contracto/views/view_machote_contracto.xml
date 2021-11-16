@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="machote_de_contracto">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <xpath expr="." position="inside">
+                                <link href="/machote_contracto/static/src/css/bootstrap.min.css" rel="stylesheet"
+                                      type="text/css"/>
+                                <link href="/machote_contracto/static/src/css/style.css" rel="stylesheet"
+                                      type="text/css"/>
+                            </xpath>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p>
+                                                CONTRATO INDIVIDUAL DE
+                                                <b>
+                                                    <span t-field="o.tipo_contracto"
+                                                          style="text-transform: uppercase;"/>
+                                                </b>
+                                                QUE CELEBRAN POR UNA PARTE <b>BENEFICIADORA DE ALAMBRES Y METALES S.A.
+                                                DE
+                                                C.V.
+                                            </b> A QUIEN EN LO SUCESIVO SE LE DENOMINARA COMO <b>"LA EMPRESA"</b>,
+                                                REPRESENTADA
+                                                EN ESTE ACTO POR <b>FRANCISCO JAVIER DE ALBA VARELA</b>, Y POR LA OTRA
+                                                el C.
+                                                <b>
+                                                    <span t-field="o.employee_id.name"
+                                                          style="text-transform: uppercase;"/>
+                                                </b>
+                                                , A QUIEN EN LO SUCESIVO SE LE DENOMINARA <b>"EL TRABAJADOR"</b>, AL
+                                                TENOR DE LAS SIGUIENTES DECLARACIONES Y CLAUSULAS.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-12 text-center">
+                                            <h4>D E C L A R A C I O N E S</h4>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p>
+                                                <b>I</b>. DECLARA <b>"LA EMPRESA"</b>:
+                                            </p>
+                                            <p>
+                                                <b>a)</b>
+                                                Ser una persona moral, constituida conforme a las leyes de la
+                                                República
+                                                Mexicana, dedicada a, <b>LA FABRICACION Y VENTA DE PRODUCTOS PARA LA
+                                                INDUSTRIA
+                                                TORNILLERA Y AFINES</b>, con Registro Federal de Contribuyentes
+                                                <b>BAM7810201G0</b>.
+                                            </p>
+                                            <p>
+                                                <b>b)</b>
+                                                Tener su domicilio en la <b>CALLE SALAMANCA 1126, CIUDAD INDUSTRIAL,
+                                                IRAPUATO, GUANAJUATO, CODIGO POSTAL 36541</b>.
+                                            </p>
+                                            <p>
+                                                <b>c)</b>
+                                                Que requiere los servicios de <b>"EL TRABAJADOR"</b> para desempeñar
+                                                el
+                                                puesto de
+                                                <span t-field="o.job_id.name" style="font-weight: bold;"/>
+                                                cuyas labores consistirán
+                                                primordialmente en
+                                                <span style="font-weight: bold;">
+                                                    <t t-esc="o.job_id.description"/>
+                                                </span>
+                                                , y en general todas las que sean similares y le sean
+                                                asignadas por <b>"LA EMPRESA"</b>, para desempeñarlas en cualesquiera de
+                                                los
+                                                diversos establecimientos, plantas, sucursales, bodegas o lugares de
+                                                trabajo que le sean señalado por <b>"LA EMPRESA"</b>, donde se requiera
+                                                el
+                                                desarrollo de las actividades contratadas, dentro de la República
+                                                Mexicana.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p>
+                                                <b>II</b>. DECLARA <b>"EL TRABAJADOR"</b>, BAJO PROTESTA DE DECIR
+                                                VERDAD:
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p>
+                                                <b>a)</b>
+                                                Llamarse como ha quedado escrito al inicio del presente contrato, de
+                                                nacionalidad mexicana, con fecha de nacimiento
+                                                <b>
+                                                    <span t-field="o.employee_id.birthday"
+                                                          t-options="{'format':'dd/MMMM/yyyy'}"/>
+                                                </b>
+                                                con
+                                                <b>
+                                                    <span t-field="o.edad_empleado"/>
+                                                </b>
+                                                años de edad, sexo
+                                                <b>
+                                                    <span t-field="o.employee_id.gender"/>
+                                                </b>
+                                                , estado civil
+                                                <b>
+                                                    <span t-field="o.employee_id.marital"/>
+                                                </b>
+                                                , Clave Única de
+                                                Registro de Población (CURP)
+                                                <b>
+                                                    <span t-field="o.employee_id.curp"/>
+                                                </b>
+                                                , Registro Federal de
+                                                Contribuyentes (RFC)
+                                                <b>
+                                                    <span t-field="o.employee_id.rfc"/>
+                                                </b>
+                                                y Numero de Seguridad Social (NSS)
+                                                <b>
+                                                    <span t-field="o.employee_id.segurosocial"/>
+                                                </b>
+                                                .
+                                            </p>
+                                            <p>
+                                                <b>b)</b>
+                                                Tener su domicilio en
+                                                <b style="text-transform: uppercase;">
+                                                    <span t-field="o.employee_id.calle"/>
+                                                    <span t-field="o.employee_id.numero"/>,
+                                                    <span t-field="o.employee_id.colonia"/>,
+                                                    <span t-field="o.employee_id.ciudad"/>,
+                                                    <span t-field="o.employee_id.estado_mx"/>,
+                                                    <span t-field="o.employee_id.codigo_postal"/>
+                                                </b>
+                                                ,
+                                                mismo que proporciona a <b>"LA EMPRESA"</b> para todos los efectos
+                                                legales a que haya lugar y en especial para los supuestos contemplados
+                                                en el artículo 47 de la Ley Federal del Trabajo.
+                                            </p>
+                                            <p>
+                                                El trabajador acredita lo anterior con los siguientes documentos: Copia
+                                                de Acta De Nacimiento, Clave Única de Registro de Población (CURP),
+                                                Registro Federal de Contribuyentes (RFC), Numero de Seguridad Social
+                                                (NSS), Comprobante de domicilio, y comprobante de estudios.
+                                            </p>
+                                            <p>
+                                                <b>c)</b>
+                                                Que no tiene enfermedad o incapacidad que le imposibilite desempeñar
+                                                el trabajo mencionado derivadas de un estado patológico o de cualquier
+                                                otra índole ya sea permanente, parcial o transitoria.
+                                            </p>
+                                            <p>
+                                                <b>c)</b>
+                                                Que no tiene enfermedad o incapacidad que le imposibilite desempeñar
+                                                el trabajo mencionado derivadas de un estado patológico o de cualquier
+                                                otra índole ya sea permanente, parcial o transitoria.
+                                            </p>
+                                            <p>
+                                                <b>e)</b>
+                                                Las personas que a continuación designa serán los beneficiarios a los
+                                                que refiere el artículo 501 de la Ley Federal del Trabajo, para el pago
+                                                de los salarios y prestaciones devengadas y no cobradas a la muerte de
+                                                los trabajadores o las que se generen por su fallecimiento o
+                                                desaparición derivada de un acto delincuencial.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <table class="table table-sm table-bordered">
+                                                <thead>
+                                                    <tr class="text-center">
+                                                        <th>Beneficiario</th>
+                                                        <th width="500">Nombre</th>
+                                                        <th>Parentesco</th>
+                                                        <th>Porcentaje</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="text-center">
+                                                        <td>1</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>2</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>3</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>4</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>5</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="text-center">Total 100%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p>
+                                                <b>III</b>. Ambas partes enteradas de lo anterior están de acuerdo en
+                                                celebrar
+                                                contrato individual de trabajo por tiempo determinado, bajo las
+                                                siguientes:
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-12 text-center">
+                                            <h4>
+                                                C L A U S U L A S
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p>
+                                                <b>PRIMERA</b>.- <b>"El TRABAJADOR"</b> se obliga a prestar sus
+                                                servicios personales y
+                                                subordinados <b>"LA EMPRESA"</b> bajo la subordinación, dirección y
+                                                dependencia
+                                                de ésta, para el puesto y funciones señaladas en el inciso c) de la
+                                                Declaración I, del presente contrato, quedando entendido que cuando así
+                                                lo requiera <b>"LA EMPRESA"</b> queda obligado a desempeñar cualquier
+                                                otra
+                                                actividad a la señalada, anexa o conexa con su ocupación principal y que
+                                                sea compatible con sus conocimientos, sin perjuicio de cualesquiera
+                                                otras que se le encomienden.
+                                            </p>
+                                            <p>
+                                                <b>"EL TRABAJADOR"</b>
+                                                deberá prestar los servicios antes señalados, en forma
+                                                enunciativa y no limitativa, conforme a las instrucciones que reciba de
+                                                <b>"LA EMPRESA"</b>
+                                                o de sus representantes, ello en relación a la forma y
+                                                tiempo en que deba desarrollarlos.
+                                            </p>
+                                            <p>
+                                                <b>SEGUNDA</b>.- El presente Contrato se celebra por un tiempo de
+                                                <b>
+                                                    <span t-field="o.tiempo_contracto"/>
+                                                </b>
+                                                a
+                                                partir de la fecha de su firma y solo podrá ser modificado, suspendido,
+                                                rescindido o terminado en los casos y con los requisitos establecidos en
+                                                la Ley Federal del Trabajo.
+                                            </p>
+                                            <p>
+                                                <b>TERCERA</b>.- <b>"El TRABAJADOR"</b> se obliga a prestar sus
+                                                servicios en el lugar
+                                                o lugares que le señale <b>"LA EMPRESA"</b>, en los diversos
+                                                establecimientos,
+                                                plantas, sucursales, corresponsalías, bodegas o bien en las plazas o
+                                                zonas que le sean ordenas por <b>"LA EMPRESA"</b> o sus representantes,
+                                                dentro
+                                                de la República Mexicana, donde requieran sus servicios, ya sea que el
+                                                cambio ordenado sea permanente o eventual, sin menoscabo de sus
+                                                percepciones o dignidad.
+                                            </p>
+                                            <p>
+                                                <b>CUARTA</b>.- <b>"EL TRABAJADOR"</b> desempeñara sus servicios bajo la
+                                                dirección y
+                                                dependencia de <b>"LA EMPRESA"</b>, quedando obligado a observar todas
+                                                las
+                                                instrucciones que de esta reciba, en relación a su trabajo contratado y
+                                                condiciones de seguridad establecidas por <b>"LA EMPRESA"</b>.
+                                                <b>"EL TRABAJADOR"</b>
+                                                queda obligado a realizar todo el esfuerzo necesario que esté de su
+                                                parte a fin de facilitar las operaciones de producción las que nunca
+                                                estarán sujetas al uso o vigilancia de determinadas maquinas o útiles de
+                                                trabajo, sino al manejo, uso y atención de cuantos utensilios o máquinas
+                                                sea posible realizar por <b>"EL TRABAJADOR"</b>.
+                                            </p>
+                                            <p>
+                                                <b>"EL TRABAJADOR"</b>
+                                                se obliga a observar todas las instrucciones, políticas,
+                                                reglamentos, manuales que establezca o pueda establecerse o se
+                                                modifiquen en lo futuro y a vigilar que éstos sean cumplidos. De igual
+                                                manera se obliga a observar el Reglamento Interior de Trabajo que tiene
+                                                formulado <b>"LA EMPRESA"</b> o los que formule en lo futuro, así como
+                                                las
+                                                políticas y demás usos que rigen en la misma.
+                                            </p>
+                                            <p>
+                                                <b>QUINTA</b>.- <b>"EL TRABAJADOR"</b> se obliga a reponer el material,
+                                                herramienta,
+                                                equipo de protección personal y todo aquello que se le proporcione para
+                                                el desempeño de sus actividades, que por su negligencia resulte
+                                                inservible y por lo tanto <b>"LA EMPRESA"</b> en términos de lo
+                                                dispuesto en la
+                                                fracción I del artículo 110 de la Ley Federal del Trabajo, podrá
+                                                descontar de su salario el monto que resulte por la pérdidas o avería
+                                                del material, herramienta, equipo de protección personal y todo aquello
+                                                que se le proporcione para el desempeño de sus actividades.
+                                            </p>
+                                            <p>
+                                                <b>SEXTA</b>.- Como remuneración por los servicios contratados,
+                                                <b>"EL TRABAJADOR"</b>
+                                                recibirá un salario diario de
+                                                <b>$
+                                                    <span t-field="o.sueldo_diario"/>
+                                                    (
+                                                    <span t-esc="o.currency_id.amount_to_text(o.sueldo_diario)"/>
+                                                    00/100 M.N.)
+                                                </b>
+                                                , mismo que estará sujeto a las retenciones que conforme a
+                                                la legislación mexicana procedan. Dicho pago será efectuado los días
+                                                Viernes por semanas vencidas, en el domicilio de <b>"LA EMPRESA"</b> o
+                                                bien se
+                                                hará por medio de depósito en la cuenta bancaria que <b>"LA EMPRESA"</b> asigne
+                                                a <b>"EL TRABAJADOR"</b>, el cual está obligado a firmar de recibido por
+                                                las
+                                                cantidades que le sean depositadas; independientemente de ello el simple
+                                                deposito ante la Institución Bancaria hará las veces de comprobante de
+                                                pago en términos de los dispuesto por el artículo 804 de la Ley Federal
+                                                del Trabajo, aun cuando no conste la firma de <b>"EL TRABAJADOR"</b>.
+                                            </p>
+                                            <p>
+                                                <b>SEPTIMA</b>.- La duración de la jornada semanal de trabajo será la
+                                                legal,
+                                                esto es 48 horas la diurna, 45 horas la mixta y 42 horas la nocturna,
+                                                pudiéndolas distribuir y ajustar de acuerdo a las necesidades y
+                                                actividades de <b>"LA EMPRESA"</b> y del trabajo a desarrollar en los
+                                                diversos
+                                                turnos de trabajo.
+                                            </p>
+                                            <p>
+                                                En caso de que por necesidades del PATRON se requiera cambiar el horario
+                                                semanal de trabajo <b>"EL TRABAJADOR"</b> se obliga a laborar en
+                                                cualesquiera
+                                                de los turnos y días que le sean asignados por
+                                                <b>"LA EMPRESA"</b>
+                                                comunicándole oportunamente el nuevo horario, en el entendido de que por
+                                                cada seis días de trabajo disfrutará de un día de descanso con goce de
+                                                sueldo, por lo que el mismo podrá ser variado de acuerdo con el rol de
+                                                turnos que le corresponda y no necesariamente en domingo, sino podrá ser
+                                                cualquier otro día de la semana. Por lo que <b>"EL TRABAJADOR"</b> se
+                                                obliga a
+                                                laborar los días domingos que le correspondan de acuerdo con el turno
+                                                que le sea asignado por <b>"LA EMPRESA"</b>.
+                                            </p>
+                                            <p>
+                                                Ambas partes convienen en que <b>"EL TRABAJADOR"</b> gozará de 30
+                                                minutos para
+                                                sus alimentos en los horarios que determine EL PATRON de acuerdo con el
+                                                turno que les corresponda.
+                                            </p>
+                                            <p>
+                                                <b>OCTAVA</b>.- <b>EL TRABAJADOR</b> no podrá trabajar más del tiempo
+                                                señalado en la
+                                                cláusula anterior, salvo que exista la orden por escrito de <b>"LA
+                                                EMPRESA"</b>,
+                                                sin cuyo requisito no se le cubrirá importe alguno por tiempo
+                                                extraordinario.
+                                            </p>
+                                            <p>
+                                                <b>"EL TRABAJADOR"</b>
+                                                se obliga a laborar el tiempo extraordinario que le
+                                                ordene <b>"LA EMPRESA"</b> hasta por el máximo permitido por la Ley de
+                                                la
+                                                materia.
+                                            </p>
+                                            <p>
+                                                <b>"EL TRABAJADOR"</b>
+                                                se obliga a laborar en los días de descanso obligatorio
+                                                que establece la Ley Federal del Trabajo, en razón de que por necesidad
+                                                de producción y compromisos de <b>"LA EMPRESA"</b> así se requiera, para
+                                                ello
+                                                <b>"LA EMPRESA"</b>
+                                                dará la orden por escrito a
+                                                <b>"EL TRABAJADOR"</b>
+                                            </p>
+                                            <p>
+                                                <b>NOVENA</b>.- <b>"El TRABAJADOR"</b> disfrutará de los periodos de
+                                                vacaciones y
+                                                prima vacacional en los términos y condiciones del artículo 76 de la Ley
+                                                Federal del Trabajo. <b>"LA EMPRESA"</b> señalara a <b>"EL TRABAJADOR"
+                                            </b> las fechas
+                                                en que podrán ser disfrutadas las citadas vacaciones.
+                                            </p>
+                                            <p>
+                                                <b>"EL TRABAJADOR"</b>
+                                                disfrutará de un aguinaldo anual conforme a lo dispuesto
+                                                en el artículo 87 de la Ley Federal del Trabajo, mismo que se pagará a
+                                                más tardar el día 20 de diciembre de cada año.
+                                            </p>
+                                            <p>
+                                                En caso de que <b>"EL TRABAJADOR"</b> no haya laborado el año completo,
+                                                ya sea
+                                                por incapacidad u otra causa semejante solo tendrá derecho a la parte
+                                                proporcional de acuerdo al tiempo efectivamente laborado.
+                                            </p>
+                                            <p>
+                                                <b>DÉCIMA</b>.- <b>"El TRABAJADOR"</b> será capacitada o adiestrado en
+                                                los términos de
+                                                los planes y programas que establezca <b>"LA EMPRESA"</b>.
+                                            </p>
+                                            <p>
+                                                <b>"EL TRABAJADOR"</b>
+                                                se obliga a participar en todas y cada uno de los
+                                                programas de productividad, formación y capacitación que se establezcan
+                                                en el centro de trabajo, ya sea en forma activa impartiendo cursos o
+                                                recibiéndolos, ello conforme a los planes y programas formulados por <b>
+                                                "LA
+                                                EMPRESA"</b>.
+                                            </p>
+                                            <p>
+                                                Las partes convienen que cuando la capacitación sea fuera de los
+                                                horarios de trabajo, ello no implica el pago de tiempo extraordinario,
+                                                para lo cual <b>"EL TRABAJADOR"</b> deberá asistir puntualmente a los
+                                                cursos,
+                                                sesiones de grupo y demás actividades que forman parte de la
+                                                capacitación; debiendo atender las indicaciones del personal que imparta
+                                                las mismas. <b>"EL TRABAJADOR"</b> deberá presentar los exámenes de
+                                                aptitud que
+                                                sean requeridos.
+                                            </p>
+                                            <p>
+                                                Las partes convienen que el incumplimiento a esta obligación será causa
+                                                suficiente para que <b>"LA EMPRESA"</b> rescinda este contrato sin
+                                                responsabilidad para la misma.
+                                            </p>
+                                            <p>
+                                                <b>DÉCIMA PRIMERA</b>.- Las partes convienen que las invenciones
+                                                realizadas
+                                                dentro de <b>"LA EMPRESA"</b>, ya sea por investigación,
+                                                perfeccionamiento de
+                                                los procedimientos utilizados en <b>"LA EMPRESA"</b> o cualquier
+                                                producto por
+                                                parte de <b>"EL TRABAJADOR"</b> serán exclusiva propiedad de <b>"LA
+                                                EMPRESA"
+                                            </b> así
+                                                como el derecho a la explotación de la patente.
+                                                <b>"EL TRABAJADOR"</b>
+                                                tendrá
+                                                derecho a una compensación que se fijará por convenio de las partes.
+                                            </p>
+                                            <p>
+                                                <b>DÉCIMA SEGUNDA</b>.- <b>"EL TRABAJADOR"</b> se obliga a los
+                                                reconocimientos médicos
+                                                previstos por <b>"LA EMPRESA"</b> o bien establecidas por la autoridades
+                                                sanitarias correspondientes.
+                                            </p>
+                                            <p>
+                                                Las partes convienen que el incumplimiento a esta obligación será causa
+                                                suficiente para que <b>"LA EMPRESA"</b> rescinda este contrato sin
+                                                responsabilidad para la misma.
+                                            </p>
+                                            <p>
+                                                <b>DÉCIMA TERCERA</b>.-
+                                                <b>"EL TRABAJADOR"</b>
+
+                                                se obliga a mantener la más estricta
+                                                confidencialidad respecto de la información, documentación, secretos
+                                                técnicos, comerciales y de fabricación propiedad de <b>"LA EMPRESA"</b>,
+                                                así
+                                                como a dar a conocer asuntos de carácter reservado de la misma.
+                                            </p>
+                                            <p>
+                                                Las partes convienen que el incumplimiento a esta obligación será causa
+                                                suficiente para que <b>"LA EMPRESA"</b> rescinda este contrato sin
+                                                responsabilidad para la misma.
+                                            </p>
+                                            <p>
+                                                <b>DÉCIMA CUARTA</b>.- <b>"LA EMPRESA"</b> podrá dar por rescindido el
+                                                presente
+                                                contrato sin responsabilidad para ella en los siguientes casos:
+                                            </p>
+                                            <p>
+                                                <b>a)</b>
+                                                Cuando <b>"EL TRABAJADOR"</b> incurra en alguna de las clausulas
+                                                establecidas por el artículo 47 de la Ley Federal del Trabajo.
+                                            </p>
+                                            <p>
+                                                <b>b)</b>
+                                                El incumplimiento de las obligaciones establecidas en el artículo 134
+                                                de la Ley Federal del Trabajo por parte de <b>"EL TRABAJADOR"</b>.
+                                            </p>
+                                            <p>
+                                                <b>c)</b>
+                                                El incumplimiento a las obligaciones contraídas en el presente
+                                                contrato.
+                                            </p>
+                                            <p>
+                                                <b>d)</b>
+                                                Fumar y/o ingerir bebidas alcohólicas y/o consumir algún tipo de
+                                                narcótico o droga enervante, salvo que, en este último caso, exista
+                                                prescripción médica, en el lugar de trabajo o en cualquier parte de las
+                                                instalaciones de <b>"LA EMPRESA"</b>.
+                                            </p>
+                                            <p>
+                                                <b>e)</b>
+                                                Concurrir
+                                                <b>"EL TRABAJADOR"</b>
+                                                a sus labores en estado de embriaguez o
+                                                bajo la influencia de algún narcótico o droga enervante, salvo que, en
+                                                este último caso, exista prescripción médica, para cuyo caso <b>"EL
+                                                TRABAJADOR"
+                                            </b> se obliga a informar y presentar dicha prescripción médica a
+                                                <b>"LA EMPRESA"</b>
+                                                de manera previa al inicio de sus labores.
+                                            </p>
+                                            <p>
+                                                <b>f)</b>
+                                                Faltar a sus labores en día domingo ya sea por así corresponder a su
+                                                turno o bien por requerimiento de <b>"LA EMPRESA"</b>, o en cualquier
+                                                día
+                                                anterior o posterior a su día de descanso.
+                                            </p>
+                                            <p>
+                                                <b>g)</b>
+                                                Faltar a sus labores en día festivo, cuando haya habido requerimiento
+                                                por parte de <b>"LA EMPRESA"</b>.
+                                            </p>
+                                            <p>
+                                                <b>h)</b>
+                                                Negarse a laborar tiempo extraordinario cuando haya habido
+                                                requerimiento por parte de <b>"LA EMPRESA"</b>.
+                                            </p>
+                                            <p>
+                                                <b>i)</b>
+                                                No portar de manera correcta el equipo de protección personal
+                                                asignado a <b>"EL TRABAJADOR"</b> conforme a los servicios prestados.
+                                            </p>
+                                            <p>
+                                                <b>j)</b>
+                                                Utilizar teléfonos celulares, auriculares y/o cualquier otro
+                                                instrumento o aparato que comprometa la seguridad de <b>"EL
+                                                TRABAJADOR"</b>,
+                                                sus compañeros o las instalaciones de
+                                                <b>"LA EMPRESA"</b>
+                                            </p>
+                                            <p>
+                                                Las partes convienen que el domicilio señalado por <b>"EL
+                                                TRABAJADOR"</b>en
+                                                la
+                                                declaración II, inciso b) del Capítulo de Declaraciones del presente
+                                                contrato será el domicilio correcto para cualquier clase de
+                                                notificaciones y/o avisos que le haga <b>"LA EMPRESA"</b>, en especial
+                                                para
+                                                los
+                                                efectos del tercer párrafo del artículo 47 de la Ley Federal del
+                                                Trabajo; por lo que <b>"EL TRABAJADOR"</b> se obliga a dar aviso a <b>
+                                                "LA
+                                                EMPRESA"</b>, de cualquier cambio de domicilio que llegare a tener.
+                                            </p>
+                                            <p>
+                                                <b>DECIMA QUINTA</b>.- Las partes convienen en que todo lo no previsto
+                                                en el
+                                                presente Contrato, se regirá por lo dispuesto en la Ley Federal del
+                                                Trabajo y por lo dispuesto en el Reglamento Interior del Trabajo vigente
+                                                en
+                                                <b>"LA EMPRESA"</b>
+                                                , el cual declara el trabajador haber leído y comprendido
+                                                completamente y en específico el capítulo de sanciones por las
+                                                diferentes violaciones que se lleguen a cometer, obligándose a cumplir
+                                                con dicho reglamento en su totalidad.
+                                            </p>
+                                            <p>
+                                                Leído que fue y enteradas las partes del alcance de todos y cada una de
+                                                las <b>DECLARACIONES y CLAUSULAS</b> anteriores, lo firman en
+                                                <b>Irapuato,
+                                                    Guanajuato, a
+                                                    <span t-field="o.date_start" t-options="{'format':'dd/MMMM/yyyy'}"/>
+                                                </b>
+                                                recibiendo en este acto el
+                                                <b>TRABAJADOR</b>
+                                                una copia del presente contrato y del Reglamento Interior de Trabajo
+                                                vigente actualmente en
+                                                <b>"LA EMPRESA"</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p class="text-center">
+                                                <b>LA EMPRESA</b>
+                                            </p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="text-center">
+                                                <b>EL TRABAJADOR</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p class="text-center">
+                                                _______________________
+                                            </p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="text-center">
+                                                _______________________
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p class="text-center">
+                                                <b>Francisco Javier De Alba Varela</b>
+                                                <br/>
+                                                Representante Legal
+                                            </p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="text-center">
+                                                <b>C.
+                                                    <span t-field="o.employee_id.name"/>
+                                                </b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p class="text-center">
+                                                <b>TESTIGO</b>
+                                            </p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="text-center">
+                                                <b>TESTIGO</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p class="text-center">
+                                                ___________________________
+                                            </p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="text-center">
+                                                ___________________________
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p class="text-center">
+                                                <b>
+                                                    <span t-field="o.testigo1"/>
+                                                </b>
+                                            </p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="text-center">
+                                                <b>
+                                                    <span t-field="o.testigo2"/>
+                                                </b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <report id="print_machote"
+                string="Machote de Contracto"
+                model="hr.contract"
+                report_type="qweb-pdf"
+                name="machote_contracto.machote_de_contracto"
+        />
+
+        <!-- <record id="paperformat_machote" model="report.paperformat">
+            <field name="name">Machote de Contracto</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">3</field>
+            <field name="margin_bottom">3</field>
+            <field name="margin_left">3</field>
+            <field name="margin_right">3</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">3</field>
+            <field name="dpi">80</field>
+        </record>
+
+        <record id="print_machote" model="ir.actions.report">
+            <field name="paperformat_id" ref="paperformat_machote"/>
+        </record>
+        -->
+
+    </data>
+</odoo>
