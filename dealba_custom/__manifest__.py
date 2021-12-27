@@ -14,6 +14,7 @@
         'hr',
         'sale_management',
         'sale_project',
+        'mrp_workorder',
     ],
     'data': [
         'data/project_task_type_data.xml',
@@ -23,5 +24,8 @@
         'views/project_views.xml',
         'views/assets.xml',
         'report/report_proyecto_avance.xml',
+        'views/mrp_workcenter_views.xml',
+        'views/mrp_workorder_views.xml',
+        'views/mrp_views.xml',
     ],
 }
