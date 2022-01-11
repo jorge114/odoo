@@ -122,8 +122,8 @@ class IncapacidadesNomina(models.Model):
            incapacidad = self.env['hr.leave'].create(vals)
            incapacidad.action_validate()
 
-               self.write({'state':'done'})
-               return
+        self.write({'state':'done'})
+        return
 
    
     def action_cancelar(self):
