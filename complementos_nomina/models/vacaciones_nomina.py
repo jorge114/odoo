@@ -61,8 +61,8 @@ class VacacionesNomina(models.Model):
                     'state': 'confirm', }
 
             holiday = holidays_obj.new(vals)
-            holiday._onchange_employee_id()
-            holiday._onchange_leave_dates()
+            #holiday._onchange_employee_id()
+            #holiday._onchange_leave_dates()
             vals.update(holiday._convert_to_write({name: holiday[name] for name in holiday._cache}))
             vals.update({'holiday_status_id': leave_type and leave_type.id, })
             vacacion = self.env['hr.leave'].create(vals)
