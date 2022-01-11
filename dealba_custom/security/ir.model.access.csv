@@ -7,5 +7,3 @@ access_project_project_fase,access_project_project_fase,model_project_project_fa
 access_project_project_accion,access_project_project_accion,model_project_project_accion,base.group_user,1,1,1,1
 access_project_project_hito,access_project_project_hito,model_project_project_hito,base.group_user,1,1,1,1
 access_project_project_minuta,access_project_project_minuta,model_project_project_minuta,base.group_user,1,1,1,1
-
-access_variacion,access_variacion,model_variacion,base.group_user,1,1,1,1
