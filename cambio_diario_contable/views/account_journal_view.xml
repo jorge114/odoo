@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="view_update_field_cuenta_gastos" model="ir.ui.view">
+        <field name="name">account.journal.change.field.kuh7</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='default_account_type']" position="after">
+                <field name="default_account_custome_id" string="" />
+                <!-- Sales -->
+                <field name="default_account_custome_id" string="Cuenta de ingresos predeterminada" attrs="{'required': [('type', '=', 'sale')]}" groups="account.group_account_readonly"/>
+                <!-- Purchase -->
+                <field name="default_account_custome_id" string="Cuenta de gastos predeterminada" attrs="{'required': [('type', '=', 'purchase')]}" groups="account.group_account_readonly"/>
+            </xpath>
+            <xpath expr="//field[@name='default_account_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
