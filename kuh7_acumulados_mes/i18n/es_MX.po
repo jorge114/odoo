@@ -1,0 +1,46 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kuh7_acumulados_mes
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-01 21:54+0000\n"
+"PO-Revision-Date: 2021-11-01 21:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kuh7_acumulados_mes
+#: model:ir.model.fields,field_description:kuh7_acumulados_mes.field_hr_payslip__accumulated_taxable_perceptions
+msgid "Accumulated Taxable Perceptions"
+msgstr "Acumulado base gravable"
+
+#. module: kuh7_acumulados_mes
+#: model:ir.model.fields,field_description:kuh7_acumulados_mes.field_hr_payslip__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: kuh7_acumulados_mes
+#: model_terms:ir.ui.view,arch_db:kuh7_acumulados_mes.hr_payslip_form_info_aditional_kuh7
+msgid "Fondo de ahorro"
+msgstr ""
+
+#. module: kuh7_acumulados_mes
+#: model:ir.model.fields,field_description:kuh7_acumulados_mes.field_hr_payslip__id
+msgid "ID"
+msgstr ""
+
+#. module: kuh7_acumulados_mes
+#: model:ir.model.fields,field_description:kuh7_acumulados_mes.field_hr_payslip____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: kuh7_acumulados_mes
+#: model:ir.model,name:kuh7_acumulados_mes.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Nómina"
