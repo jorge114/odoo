@@ -337,11 +337,11 @@ class PortalSAT(object):
     _description = 'PortalSAT'
 
     URL_MAIN = 'https://portalcfdi.facturaelectronica.sat.gob.mx/'
-    HOST = 'cfdiau.sat.gob.mx'
+    HOST = 'https://cfdiau.sat.gob.mx/'
     BROWSER = 'Mozilla/5.0 (X11; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0'
     REFERER = 'https://cfdiau.sat.gob.mx/nidp/app/login?id=SATUPCFDiCon&sid=0&option=credential&sid=0'
 
-    PORTAL = 'portalcfdi.facturaelectronica.sat.gob.mx'
+    PORTAL = 'https://portalcfdi.facturaelectronica.sat.gob.mx'
     URL_LOGIN = 'https://{}/nidp/app/login'.format(HOST)
     #~ URL_LOGIN = 'https://{}/nidp/wsfed/ep'.format(HOST)
     URL_FORM = 'https://{}/nidp/app/login?sid=0&sid=0'.format(HOST)
