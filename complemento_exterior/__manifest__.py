@@ -6,7 +6,7 @@
 
 {
     'name': 'Complemento Comercio Exterior',
-    'version': '13.1',
+    'version': '14.04',
     'description': ''' Agrega campos para timbrar facturas CFDI 3.3 con el complemento de comercio exterior
     ''',
     'category': 'Accounting',
