@@ -3,6 +3,7 @@
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 from datetime import datetime
+from dateutil.relativedelta import *
 
 class EmployeeLoan(models.Model):
     _inherit = 'employee.loan'
