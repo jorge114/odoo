@@ -109,11 +109,12 @@ class HrPayslip(models.Model):
     importe_isr = fields.Float('importe_isr')
     periodicidad = fields.Char('periodicidad')
     concepto_periodico = fields.Boolean('Conceptos periodicos', default = True)
+    aplicar_descuentos = fields.Boolean('Aplicar descuentos', default = True)
 
     #imss empleado
     emp_exedente_smg = fields.Float(string='Exedente 3 SMGDF.')
     emp_prest_dinero = fields.Float(string='Prest en dinero')
-    emp_esp_pens = fields.Float(string='P. Esp. Desp.')
+    emp_esp_pens = fields.Float(string='Gastos médicos')
     emp_invalidez_vida = fields.Float( string='Invalidez y Vida.')
     emp_cesantia_vejez = fields.Float(string='Cesantia y vejez.')
     emp_total = fields.Float(string='IMSS trabajador')
@@ -121,7 +122,7 @@ class HrPayslip(models.Model):
     pat_cuota_fija_pat = fields.Float(string='Cuota fija patronal')
     pat_exedente_smg = fields.Float(string='Exedente 3 SMGDF')
     pat_prest_dinero = fields.Float(string='Prest. en dinero')
-    pat_esp_pens = fields.Float(string='P. Esp. Desp')
+    pat_esp_pens = fields.Float(string='Gastos médicos')
     pat_riesgo_trabajo = fields.Float( string='Riegso de trabajo')
     pat_invalidez_vida = fields.Float( string='Invalidez y Vida')
     pat_guarderias = fields.Float(string='Guarderias y PS')
@@ -848,6 +849,8 @@ class HrPayslip(models.Model):
                 parte_exenta = 0
                 parte_gravada = 0
                 _logger.info('codigo %s monto %s', line.salary_rule_id.code, line.total)
+                if not line.salary_rule_id.tipo_cpercepcion.clave:
+                    raise UserError(_('La regla salarial %s no tiene clave del SAT configurado.') % (line.salary_rule_id.name))
 
                 if line.salary_rule_id.exencion:
                     percepciones_excentas_lines += 1
@@ -963,6 +966,9 @@ class HrPayslip(models.Model):
         if otrospagos_lines:
             for line in otrospagos_lines:
                 #_#logger.info('line total ...%s', line.total)
+                if not line.salary_rule_id.tipo_cotro_pago.clave:
+                    raise UserError(_('La regla salarial %s no tiene clave del SAT configurado.') % (line.salary_rule_id.name))
+
                 if line.salary_rule_id.tipo_cotro_pago.clave == '002': # and line.total > 0:
                     #line2 = self.contract_id.env['tablas.subsidio.line'].search([('form_id','=',self.contract_id.tablas_cfdi_id.id),('lim_inf','<=',self.contract_id.wage)],order='lim_inf desc',limit=1)
                     self.subsidio_periodo = 0
@@ -1012,6 +1018,9 @@ class HrPayslip(models.Model):
             #_logger.info('entro deduciones ...')
             #todas las deducciones excepto imss e isr
             for line in deducciones_lines:
+                if not line.salary_rule_id.tipo_cdeduccion.clave:
+                    raise UserError(_('La regla salarial %s no tiene clave del SAT configurado.') % (line.salary_rule_id.name))
+
                 if line.salary_rule_id.tipo_cdeduccion.clave != '001' and line.salary_rule_id.tipo_cdeduccion.clave != '002':
                     #_logger.info('linea  ...')
                     no_deuducciones += 1
@@ -1521,6 +1530,9 @@ class HrPayslip(models.Model):
                    line.update({'total': line.total - total, 'amount': line.total - total})
                    line.refresh()
             rec.refresh()
+            #quitar prestamos cuando nomina en cero
+            if rec.total_nom <= 0 and rec.aplicar_descuentos:
+               rec.aplicar_descuentos = False
         return res
 
     @api.model

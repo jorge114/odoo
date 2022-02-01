@@ -43,6 +43,7 @@
                             </group>
                             <group string="Procesamiento">
                                 <field name="concepto_periodico"/>
+                                <field name="aplicar_descuentos"/>
                                 <field name="isr_ajustar"/>
                                 <!--<field name="isr_devolver"/>-->
                                 <field name="nom_liquidacion"/>
