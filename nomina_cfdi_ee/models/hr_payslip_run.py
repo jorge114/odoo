@@ -15,7 +15,7 @@ class HrPayslipRun(models.Model):
             slip_ids = rec.slip_ids.filtered(lambda r: r.state == 'draft')
             for slip_id in slip_ids:
                 slip_id.action_payslip_done()
-        
+
     def action_cancelar_nomina(self):
         for rec in self:
             slip_ids = rec.slip_ids.filtered(lambda r: r.state == 'done')
@@ -32,8 +32,6 @@ class HrPayslipRun(models.Model):
     dias_pagar = fields.Float(string='Dias a pagar', store=True)
     imss_dias = fields.Float(string='Dias a cotizar en la nómina', store=True)
     imss_mes = fields.Float(string='Dias en el mes', store=True)
-    #no_nomina = fields.Selection(
-    #    selection=[('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5'), ('6', '6')], string=_('No. de nómina en el mes / periodo'))
     ultima_nomina = fields.Boolean(string='Última nómina del mes')
     nominas_mes = fields.Integer('Nóminas a pagar en el mes')
     concepto_periodico = fields.Boolean('Conceptos periódicos', default = True)
@@ -168,8 +166,9 @@ class HrPayslipRun(models.Model):
 
     def recalcular_nomina_payslip_batch(self):
         for batch in self:
-            batch.slip_ids.compute_sheet()
-            
+            for slip in batch.slip_ids:
+                if slip.state == 'draft':
+                    slip.compute_sheet()
         return True
      
     @api.depends('slip_ids.state','slip_ids.nomina_cfdi')
@@ -266,11 +265,11 @@ class HrPayslipRun(models.Model):
             else:
                 if payslip.state in ['draft','verify']:
                    payslip.action_payslip_done()
-                   try:
-                       if not payslip.nomina_cfdi:
-                          payslip.action_cfdi_nomina_generate()
-                   except Exception as e:
-                       pass
+                try:
+                   if not payslip.nomina_cfdi:
+                      payslip.action_cfdi_nomina_generate()
+                except Exception as e:
+                   pass
         return
 
     def confirmar_nomina(self):

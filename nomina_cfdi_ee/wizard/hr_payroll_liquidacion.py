@@ -229,7 +229,7 @@ class GeneraLiquidaciones(models.TransientModel):
 #            _logger.info('worked_days %s --- ', worked_days)
             for lines in worked_days:
                _logger.info('lineas %s', lines[2])
-               if lines[2]['code'] != 'WORK100' and lines[2]['code'] != 'FJC' and lines[2]['code'] != 'VAC' and lines[2]['code'] != 'SEPT':
+               if lines[2]['code'] == 'FJS' or lines[2]['code'] == 'FR' or lines[2]['code'] == 'FI' or lines[2]['code'] == 'INC_EG':
                    dias_faltas += lines[2]['number_of_days']
 
             year_date_start = self.contract_id.date_start.year
