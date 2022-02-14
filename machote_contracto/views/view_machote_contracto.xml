@@ -41,7 +41,7 @@
                                     <br/>
                                     <div class="row">
                                         <div class="col-12 text-center">
-                                            <h4>D E C L A R A C I O N E S</h4>
+                                            <h4>D E C L A R A C I O N E S </h4>
                                         </div>
                                     </div>
                                     <br/>
@@ -686,7 +686,7 @@
                                                     <span t-field="o.testigo1"/>
                                                 </b>
                                             </p>
-                                        </div>
+                                    </div>
                                         <div class="col-6">
                                             <p class="text-center">
                                                 <b>
@@ -694,7 +694,23 @@
                                                 </b>
                                             </p>
                                         </div>
+                                </div>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-12 text-center">
+                                            <h4>
+                                                Recibí copia del contrato, quedandose esta en mi expediente
+                                            </h4>
+                                            <h4>
+                                                 para futuras aclaraciones
+                                            </h4>
+                                        </div>
                                     </div>
+                                    <br/>
                                 </div>
                             </div>
                         </div>

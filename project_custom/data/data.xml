@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="project_project_estado_1" model="project.project.estado">
+        <field name="name">Prospecto</field>
+    </record>
+
+    <record id="project_project_estado_2" model="project.project.estado">
+        <field name="name">En proceso</field>
+    </record>
+
+    <record id="project_project_estado_3" model="project.project.estado">
+        <field name="name">Soporte</field>
+    </record>
+
+    <record id="project_project_estado_4" model="project.project.estado">
+        <field name="name">Renovación de poliza</field>
+    </record>
+
+    <record id="project_project_estado_5" model="project.project.estado">
+        <field name="name">Finalizado</field>
+    </record>
+
+</odoo>

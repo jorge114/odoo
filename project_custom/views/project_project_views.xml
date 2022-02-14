@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_project_kanban_inherit_project_custom" model="ir.ui.view">
+        <field name="name">view.project.kanban.inherit.project.custom</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="default_group_by">stage_id</attribute>
+                <attribute name="class">oe_background_grey o_kanban_dashboard o_project_kanban o_emphasize_colors o_kanban_small_column</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="edit_project_inherit_project_custom" model="ir.ui.view">
+        <field name="name">edit.project.inherit.project.custom</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                 <field name="stage_id" widget="statusbar" options="{'clickable': '1'}"/>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>
