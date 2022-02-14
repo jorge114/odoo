@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hr_salary_rule_list_inherit_complementos_nomina" model="ir.ui.view">
+        <field name="name">hr.salary.rule.list.inherit.complementos.nomina</field>
+        <field name="model">hr.salary.rule</field>
+        <field name="inherit_id" ref="om_hr_payroll.hr_salary_rule_list"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='register_id']" position="after">
+                <field name="company_id"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

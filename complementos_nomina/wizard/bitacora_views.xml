@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="bitacora_view_form" model="ir.ui.view">
+        <field name="name">bitacora.view.form</field>
+        <field name="model">bitacora</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="detalle_ids" readonly="1">
+                    <tree>
+                        <field name="number"/>
+                        <field name="no_empleado"/>
+                        <field name="employee_id"/>
+                        <field name="error_bitacora"/>
+                    </tree>
+                </field>
+                <footer>
+                    <button string="Aceptar" class="oe_highlight" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

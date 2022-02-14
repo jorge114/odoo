@@ -94,6 +94,22 @@ class HrPayslipRun(models.Model):
                 slip_id.action_payslip_draft()
         self.state = 'draft'
 
+    def timbrar_nomina(self):
+        self.ensure_one()
+        #cr = self._cr
+        payslip_obj = self.env['hr.payslip']
+        for payslip_id in self.slip_ids.ids:
+            payslip = payslip_obj.browse(payslip_id)
+            # if payslip.state in ['draft','verify']:
+            if payslip.state in ['verify','done'] and payslip.estado_factura == 'factura_no_generada':
+               payslip.action_payslip_done()
+               try:
+                   if not payslip.nomina_cfdi:
+                      payslip.action_cfdi_nomina_generate()
+               except Exception as e:
+                   pass
+        return
+
     @api.onchange('pay_pantry_vouchers')
     def _onchange_pantry_vouchers(self):
         for line in self.slip_ids:

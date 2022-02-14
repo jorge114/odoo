@@ -41,7 +41,7 @@
                                     <br/>
                                     <div class="row">
                                         <div class="col-12 text-center">
-                                            <h4>D E C L A R A C I O N E S</h4>
+                                            <h4>D E C L A R A C I O N E S </h4>
                                         </div>
                                     </div>
                                     <br/>
@@ -686,7 +686,7 @@
                                                     <span t-field="o.testigo1"/>
                                                 </b>
                                             </p>
-                                        </div>
+                                    </div>
                                         <div class="col-6">
                                             <p class="text-center">
                                                 <b>
@@ -694,7 +694,28 @@
                                                 </b>
                                             </p>
                                         </div>
+                                </div>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-12 text-center">
+                                            <br/>
+                                                Recibí copia del contrato, quedandose esta en mi expediente
+                                                para futuras aclaraciones
+                                            <br/>
+
+                                    <div class="row">
+                                        <div class="col-12 text-center">
+                                            <br/>
+                                            Nombre y firma de Enterado:
+                                            <br/>
+                                            <br/>
+                                            ________________________________
+                                            <br/>
+                                        </div>
                                     </div>
+                                        </div>
+                                    </div>
+                                    <br/>
                                 </div>
                             </div>
                         </div>

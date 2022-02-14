@@ -4,8 +4,7 @@ import pytz
 from datetime import date
 from datetime import datetime, timedelta
 from odoo import api, fields, models
-import logging
-_logger = logging.getLogger(__name__)
+
 
 class HrContract(models.Model):
     _inherit = 'hr.contract'
@@ -77,7 +76,7 @@ class HrContract(models.Model):
         current_month = today.strftime('%m')
         current_date = today.strptime((today.strftime('%Y') + '-' + today.strftime('%m') + '-' + today.strftime('%d')),
                                       '%Y-%m-%d')
-        _logger.error('currenmont: %s', current_month)
+
         #Formamos el primer día del cada mes
         first_week_month = current_year + "-" + current_month + "-01"
         #convertimos la variable de inicio del mes a tipo fecha
@@ -102,10 +101,9 @@ class HrContract(models.Model):
             if current_date >= week_start and current_date <= week_end:
                 last_month = 0
                 last_year = 0
-                if current_month == '01':
+                if current_month == 1:
                     last_month = 12
                     last_year = int(current_year) - 1
-                    _logger.info('mes correcto')
                 else:
                     last_month = int(current_month) - 1
                     last_year = current_year
