@@ -1,0 +1,36 @@
+#border_vertical{
+    border-right: 6px solid black;
+    max-height: 100%;
+}
+
+#tabla1{
+    width:100%;
+    max-width:100%;
+    margin-bottom:1rem;
+    border-collapse:collapse !important;
+    border: 1px solid black;
+}
+
+td,th{
+    padding:.3rem;
+}
+
+#letra1{
+    font-size:12px;
+}
+
+#letra2{
+    font-size:14px;
+}
+
+#letra3{
+    font-size:16px;
+}
+
+#letra4{
+    font-size:18px;
+}
+
+#letra5{
+    font-size:20px;
+}

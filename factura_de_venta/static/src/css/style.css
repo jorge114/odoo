@@ -1,0 +1,52 @@
+#tabla1{
+    width:100%;
+    max-width:100%;
+    margin-bottom:1rem;
+    border-collapse:collapse !important;
+    border: 1px solid black;
+}
+
+td,th{
+    padding:.3rem;
+}
+
+.border{
+    border: 1px solid black;
+    border-radius:20px;
+}
+
+#letra1{
+    font-size:12px;
+}
+
+#letra2{
+    font-size:14px;
+}
+
+#letra3{
+    font-size:16px;
+}
+
+#letra4{
+    font-size:18px;
+}
+
+#letra5{
+    font-size:20px;
+}
+
+.border_top{
+    border-top: 1px solid black;
+}
+
+.border_bottom{
+    border-bottom: 1px solid black;
+}
+
+.border_left{
+    border-left: 1px solid black;
+}
+
+.border_right{
+    border-right: 1px solid black;
+}
