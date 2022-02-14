@@ -91,9 +91,6 @@
                                                             <span t-esc="l.product_id.default_code"/>
                                                         </td>
                                                         <td>
-                                                            <span t-esc="l.product_id.cce_numeroserie"/>
-                                                        </td>
-                                                        <td>
                                                             <span t-esc="l.name"/>
                                                         </td>
                                                         <td>
