@@ -10,12 +10,12 @@ class Payslip(models.Model):
     _inherit = 'hr.payslip'
 
     def get_amount_from_rule_code(self, rule_code):
-        line = self.env['hr.payslip.line'].search([('slip_id', '=', self.id), ('code', '=', rule_code)])
-        if line:
-            return round(sum(line.mapped('total')), 2)
-        else:
+        for slip in self:
+            for line in slip.line_ids:
+                if line.code == rule_code:
+                   return round(line.total,2)
             return 0.0
-    
+
     def get_total_work_days(self):
         total = 0
         for line in self.worked_days_line_ids:
