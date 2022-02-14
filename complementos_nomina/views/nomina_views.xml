@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_open_listado_de_nomina" model="ir.actions.act_window">
+        <field name="name">Reporte: Listado de nómina</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">listado.nomina</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_reportes_listado_de_nomina"
+              name="Listado de nómina"
+              action="action_open_listado_de_nomina"
+              parent="nomina_cfdi_extras_ee.menu_payroll_payslip_reportes"
+              groups="om_hr_payroll.group_hr_payroll_user"
+              sequence="30"/>
+
+</odoo>

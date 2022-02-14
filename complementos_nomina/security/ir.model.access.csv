@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+acceso_listado_nomina,acceso_listado_nomina,model_listado_nomina,base.group_user,1,1,1,1
+access_bitacora,access.bitacora,model_bitacora,base.group_user,1,1,1,1
+access_bitacora_detalles,access.bitacora.detalles,model_bitacora_detalles,base.group_user,1,1,1,1

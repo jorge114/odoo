@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="listado_nomina_form_view" model="ir.ui.view">
+        <field name="name">listado.nomina.form.view</field>
+        <field name="model">listado.nomina</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <h2>Procesamientos de nóminas</h2>
+                    <field name="payslip_run_ids" nolabel="1" widget="many2many_tags" required="1"/>
+                </group>
+                <footer>
+                    <button string="Generar" type="object" name="generar_reporte_listado_nomina" class="oe_highlight"/>
+                    <button string="Cancelar" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>
