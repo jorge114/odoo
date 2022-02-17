@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="form_archivo_zip" model="ir.ui.view">
+            <field name="name">form_archivo_zip_nomina</field>
+            <field name="model">hr.payslip.run</field>
+            <field name="inherit_id" ref="nomina_cfdi_ee.hr_payslip_run_form_nomina_cfdi"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook[last()]" position="inside">
+                    <page string="Genera Archivo ZIP">
+                        <group>
+                            <button name="generate_file_zip" type="object" string="Descarga Archivo ZIP"/>
+                        <group colspan="4">
+                        
+                        <field name="primary_file" readonly="1" filename="filename" string="Archivo ZIP generado"/>
+                         
+                    </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
