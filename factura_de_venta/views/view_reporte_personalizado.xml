@@ -96,7 +96,7 @@
                                                     FOLIO FISCAL UUID
                                                 </th>
                                                 <th id="letra1">
-                                                    USO DE CFDI: Adquisición de mercancias - G01
+                                                    USO DE CFDI: <span t-if="o.forma_pago" t-field="o.forma_pago"/>
                                                 </th>
                                             </tr>
                                         </thead>
@@ -112,7 +112,7 @@
                                                     00000000-0000000-00000000
                                                 </td>
                                                 <td id="letra1">
-                                                    METODO PAGO: Pago en parcialidades o diferido - PPD
+                                                    METODO PAGO: <span t-if="o.methodo_pago" t-field="o.methodo_pago"/>
                                                 </td>
                                             </tr>
                                         </tbody>
