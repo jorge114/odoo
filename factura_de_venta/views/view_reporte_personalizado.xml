@@ -19,18 +19,18 @@
                                     <br/>
                                     <span t-esc="o._direccion_company()"/>
                                     No.
-                                    <span t-esc="o._direccion_company2()"/>
+                                    <span t-if="o._direccion_company2" t-esc="o._direccion_company2()"/>
                                     <br/>
-                                    <span t-esc="o._direccion2_company()"/>
+                                    <span t-if="o._direccion2_company" t-esc="o._direccion2_company()"/>
                                     <br/>
                                     <span t-esc="o._RFC_company()"/>
                                     <br/>
-                                    <span t-esc="o._telefono_company()"/>
+                                    <span t-if="o._telefono_company" t-esc="o._telefono_company()"/>
                                     <br/>
-                                    <span t-esc="o._correo_company()"/>
-                                    <span t-esc="o._website_company()"/>
+                                    <span t-if="o._correo_company" t-esc="o._correo_company()"/>
+                                    <span t-if="o._website_company" t-esc="o._website_company()"/>
                                     <br/>
-                                    <span t-esc="o._company_register()"/>
+                                    <span t-if="o._website_company" t-esc="o._company_register()"/>
                                     <br/>
                                 </div>
                                 <div class="col-3">
