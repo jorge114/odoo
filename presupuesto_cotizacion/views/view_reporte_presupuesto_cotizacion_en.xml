@@ -13,7 +13,7 @@
                             </xpath>
                             <div class="row mb-4">
                                 <div class="col-6 text-center">
-                                    <p id="letra5">
+                                    <p id="letra3">
                                         (462) 622 5186
                                         <br/>
                                         01 800 5019 100
@@ -40,7 +40,7 @@
                                     </div>
                                     <div id="border_vertical"></div>
                                     <div class="col-5" style="margin-top:70px;">
-                                        <p id="letra5">
+                                        <p id="letra3">
                                             <br/>
                                             Customer:
                                             <span t-field="o.partner_id.name"/>
@@ -52,7 +52,7 @@
                                         </p>
                                     </div>
                                     <div class="col-5" style="margin-top:70px;">
-                                        <p id="letra5">
+                                        <p id="letra3">
                                             Date:
                                             <span t-field="o.validity_date"/>
                                             <br/>
@@ -91,6 +91,9 @@
                                                             <span t-esc="l.product_id.default_code"/>
                                                         </td>
                                                         <td>
+                                                            <span t-esc="l.product_id.cce_numeroserie"/>
+                                                        </td>
+                                                        <td>
                                                             <span t-esc="l.name"/>
                                                         </td>
                                                         <td>
@@ -119,7 +122,7 @@
                                     </div>
                                     <div id="border_vertical"></div>
                                     <div class="col-10">
-                                        <p id="letra5">
+                                        <p id="letra3">
                                             Prices + IVA and USD.
                                             <br/>
                                             Prices according to (EAU) and (MOQ), if a smaller MOQ is required, quotation
@@ -152,7 +155,7 @@
                                     </div>
                                     <div id="border_vertical"></div>
                                     <div class="col-10 mb-4">
-                                        <p id="letra5">
+                                        <p id="letra3">
                                             Sincerely.
                                             <br/>
                                             <br/>

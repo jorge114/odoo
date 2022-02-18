@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <template id="reporte_presupuesto_cotizacion">
+        <template id="report_pres_cot_es">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">
                     <xpath expr="//t[@t-call='web.external_layout']" position="replace">
@@ -13,7 +13,7 @@
                             </xpath>
                             <div class="row mb-4">
                                 <div class="col-6 text-center">
-                                    <p id="letra5">
+                                    <p id="letra3">
                                         (462) 622 5186
                                         <br/>
                                         01 800 5019 100
@@ -40,7 +40,7 @@
                                     </div>
                                     <div id="border_vertical"></div>
                                     <div class="col-5" style="margin-top:70px;">
-                                        <p id="letra5">
+                                        <p id="letra3">
                                             <br/>
                                             Cliente:
                                             <span t-field="o.partner_id.name"/>
@@ -52,7 +52,7 @@
                                         </p>
                                     </div>
                                     <div class="col-5" style="margin-top:70px;">
-                                        <p id="letra5">
+                                        <p id="letra3">
                                             Fecha:
                                             <span t-field="o.validity_date"/>
                                             <br/>
@@ -120,7 +120,7 @@
                                     </div>
                                     <div id="border_vertical"></div>
                                     <div class="col-10">
-                                        <p id="letra5">
+                                        <p id="letra3">
                                             Precios + IVA y USD
                                             <br/>
                                             Precio de acuerdo a consumo anual (EAU) y lote minimo (MOQ), en caso de
@@ -159,7 +159,7 @@
                                     </div>
                                     <div id="border_vertical"></div>
                                     <div class="col-10 mb-4">
-                                        <p id="letra5">
+                                        <p id="letra3">
                                             ATENTAMENTE.
                                             <br/>
                                             <br/>
@@ -201,7 +201,7 @@
                 string="Reporte Presupuesto / Cotizacion (Español)"
                 model="sale.order"
                 report_type="qweb-pdf"
-                name="presupuesto_cotizacion.reporte_presupuesto_cotizacion"
+                name="presupuesto_cotizacion.report_pres_cot_es"
                 paperformat="presupuesto_cotizacion.paperformat_letter_presupuesto"
         />
 
