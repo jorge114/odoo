@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_pres_cot_en">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <xpath expr="//t[@t-call='web.external_layout']" position="replace">
+                        <div class="header">
+                        </div>
+                        <div class="footer">
+                            <xpath expr="." position="inside">
+                                <link href="/presupuesto_cotizacion/static/src/css/style.css" rel="stylesheet"/>
+                            </xpath>
+                            <div class="row mb-4">
+                                <div class="col-6 text-center">
+                                    <p id="letra3">
+                                        (462) 622 5186
+                                        <br/>
+                                        01 800 5019 100
+                                    </p>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <img src="/presupuesto_cotizacion/static/src/img/company.jpg"
+                                         style="max-width:400px;" alt="Company"/>
+                                </div>
+                            </div>
+                        </div>
+                    </xpath>
+                    <t t-call="web.external_layout">
+                        <xpath expr="." position="inside">
+                            <link href="/presupuesto_cotizacion/static/src/css/style.css" rel="stylesheet"/>
+                        </xpath>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-2" style="margin-top:100px;">
+                                        <img src="/presupuesto_cotizacion/static/src/img/logo.png"
+                                             style="max-width:250px; -webkit-transform: rotate(-90deg);"
+                                             alt="Company Logo"/>
+                                    </div>
+                                    <div id="border_vertical"></div>
+                                    <div class="col-5" style="margin-top:70px;">
+                                        <p id="letra3">
+                                            <br/>
+                                            Customer:
+                                            <span t-field="o.partner_id.name"/>
+                                            <br/>
+                                            Contact:
+                                            <br/>
+                                            Position:
+                                            <br/>
+                                        </p>
+                                    </div>
+                                    <div class="col-5" style="margin-top:70px;">
+                                        <p id="letra3">
+                                            Date:
+                                            <span t-field="o.validity_date"/>
+                                            <br/>
+                                            <br/>
+                                            FOB: Juntas Especiales QRO.
+                                            <br/>
+                                            Payment therms:
+                                            <span t-field="o.forma_pago"/>
+                                            <br/>
+                                            Reference:
+                                            <span t-field="o.name"/>
+                                            <br/>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2"></div>
+                                    <div id="border_vertical"></div>
+                                    <div class="col-10">
+                                        <br/>
+                                        <table id="letra3" class="table table-sm table-bordered text-center">
+                                            <thead>
+                                                <tr>
+                                                    <th>Reference</th>
+                                                    <th>Part Number</th>
+                                                    <th>Description</th>
+                                                    <th>USD / 1000</th>
+                                                    <th>EAU</th>
+                                                    <th>MOQ</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <t t-foreach="o.order_line" t-as="l">
+                                                    <tr>
+                                                        <td>
+                                                            <span t-esc="l.product_id.default_code"/>
+                                                        </td>
+                                                        <td>
+                                                            <!-- <span t-esc="l.product_id.cce_numeroserie"/> -->
+                                                        </td>
+                                                        <td>
+                                                            <span t-esc="l.name"/>
+                                                        </td>
+                                                        <td>
+                                                            <span t-esc="l.price_subtotal"/>
+                                                        </td>
+                                                        <td>
+                                                        </td>
+                                                        <td>
+                                                        </td>
+                                                    </tr>
+                                                </t>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2"></div>
+                                    <div id="border_vertical"></div>
+                                    <div class="col-10">
+                                        <br/>
+                                        <br/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                    </div>
+                                    <div id="border_vertical"></div>
+                                    <div class="col-10">
+                                        <p id="letra3">
+                                            Prices + IVA and USD.
+                                            <br/>
+                                            Prices according to (EAU) and (MOQ), if a smaller MOQ is required, quotation
+                                            may change.
+                                            <br/>
+                                            Prices subject to changes due to the feasibility process.
+                                            <br/>
+                                            Prices according to sample / design, any changes will modify quotation.
+                                            <br/>
+                                            Samples and PPAP cost: $1,000 usd.
+                                            <br/>
+                                            Aproximate LT for example.
+                                            <br/>
+                                            Aproximate LT for production material after PSW approvall, quantities may vary +-10%.
+                                            <br/>
+                                            Subjet to changes due to raw material and Exchange rate.
+                                            <br/>
+                                            Reference Exchange rate: $21.00 MXN / USD.
+                                            <br/>
+                                            Valid for 30 days.
+                                            <br/>
+                                            <br/>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 text-right" style="max-height:100%;">
+                                        <img src="/presupuesto_cotizacion/static/src/img/www.jpg"
+                                             style="width:25px;" alt="www"/>
+                                    </div>
+                                    <div id="border_vertical"></div>
+                                    <div class="col-10 mb-4">
+                                        <p id="letra3">
+                                            Sincerely.
+                                            <br/>
+                                            <br/>
+                                            <img src="/presupuesto_cotizacion/static/src/img/firma.jpg"
+                                                 style="width:300px;" alt="firma"/>
+                                            <br/>
+                                            <br/>
+                                            Omar Ascencio N
+                                            <br/>
+                                            Sales Manager.
+                                            <br/>
+                                            omar@dealba.com.mx
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+        <record id="paperformat_letter_presupuesto_en" model="report.paperformat">
+            <field name="name">Factura de Venta</field>
+            <field name="default" eval="True"/>
+            <field name="format">Letter</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">3</field>
+            <field name="margin_bottom">25</field>
+            <field name="margin_left">3</field>
+            <field name="margin_right">3</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">3</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <report id="report_print_pres_cot_en"
+                string="Reporte Presupuesto / Cotizacion (Ingles)"
+                model="sale.order"
+                report_type="qweb-pdf"
+                name="presupuesto_cotizacion.report_pres_cot_en"
+                paperformat="presupuesto_cotizacion.paperformat_letter_presupuesto_en"
+        />
+
+    </data>
+</odoo>
