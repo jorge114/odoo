@@ -19,18 +19,18 @@
                                     <br/>
                                     <span t-esc="o._direccion_company()"/>
                                     No.
-                                    <span t-if="o._direccion_company2" t-esc="o._direccion_company2()"/>
+                                    <span t-esc="o._direccion_company2()"/>
                                     <br/>
-                                    <span t-if="o._direccion2_company" t-esc="o._direccion2_company()"/>
+                                    <span t-esc="o._direccion2_company()"/>
                                     <br/>
                                     <span t-esc="o._RFC_company()"/>
                                     <br/>
-                                    <span t-if="o._telefono_company" t-esc="o._telefono_company()"/>
+                                    <span t-esc="o._telefono_company()"/>
                                     <br/>
-                                    <span t-if="o._correo_company" t-esc="o._correo_company()"/>
-                                    <span t-if="o._website_company" t-esc="o._website_company()"/>
+                                    <span t-esc="o._correo_company()"/>
+                                    <span t-esc="o._website_company()"/>
                                     <br/>
-                                    <span t-if="o._website_company" t-esc="o._company_register()"/>
+                                    <span t-esc="o._company_register()"/>
                                     <br/>
                                 </div>
                                 <div class="col-3">
@@ -96,23 +96,25 @@
                                                     FOLIO FISCAL UUID
                                                 </th>
                                                 <th id="letra1">
-                                                    USO DE CFDI: <span t-if="o.forma_pago" t-field="o.forma_pago"/>
+                                                    USO DE CFDI:
+                                                    <span t-field="o.uso_cfdi"/>
                                                 </th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td id="letra1" class="border_right">
-                                                    000000000000000
+
                                                 </td>
                                                 <td id="letra1" class="border_right">
-                                                    000000000000000
+
                                                 </td>
                                                 <td id="letra1" class="border_right">
-                                                    00000000-0000000-00000000
+                                                    <span t-field="o.folio_fiscal"/>
                                                 </td>
                                                 <td id="letra1">
-                                                    METODO PAGO: <span t-if="o.methodo_pago" t-field="o.methodo_pago"/>
+                                                    METODO PAGO:
+                                                    <span t-field="o.methodo_pago"/>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -210,323 +212,326 @@
                         <div class="footer">
                             <div class="row">
                                 <div class="col-12">
-                                    <img t-att-src="image_data_uri(o.company_id.logo)" style="max-width:90%;"
-                                         alt="Company Logo"/>
+
                                 </div>
                             </div>
                         </div>
                     </xpath>
                     <t t-call="web.external_layout">
 
-                            <xpath expr="." position="inside">
-                                <link href="/factura_de_venta/static/src/css/style.css" rel="stylesheet"/>
-                            </xpath>
-                            <div class="row" style="margin-top:420px;" >
-                                <div class="col-12">
-                                    <table id="tabla1" style="font-size:12px;">
-                                        <thead class="border_bottom">
+                        <xpath expr="." position="inside">
+                            <link href="/factura_de_venta/static/src/css/style.css" rel="stylesheet"/>
+                        </xpath>
+                        <div class="row" style="margin-top:420px;">
+                            <div class="col-12">
+                                <table id="tabla1" style="font-size:12px;">
+                                    <thead class="border_bottom">
+                                        <tr>
+                                            <th>CANT</th>
+                                            <th>No. PARTE</th>
+                                            <th></th>
+                                            <th>DESCRIPCION</th>
+                                            <th></th>
+                                            <th>LOTE</th>
+                                            <th>DESC</th>
+                                            <th>P. UNITARIO</th>
+                                            <th>IMPORTE</th>
+                                        </tr>
+                                        <tr>
+                                            <th>UNIDAD</th>
+                                            <th>CVE PROD. SERV</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th>REFERENCIA</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <th>FECHA FAB.</th>
+                                            <th>FECHA EMP.</th>
+                                            <th></th>
+                                            <th>CAJAS</th>
+                                            <th></th>
+                                            <th style="font-size:10px;">UNIDAD ADUANA</th>
+                                            <th style="font-size:10px;">FRACC. ARANCELARIA</th>
+                                            <th style="font-size:10px;">VAL. ADUANA</th>
+                                            <th style="font-size:10px;">VAL. DOLARES</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="o.invoice_line_ids" t-as="l">
                                             <tr>
-                                                <th>CANT</th>
-                                                <th>No. PARTE</th>
-                                                <th></th>
-                                                <th>DESCRIPCION</th>
-                                                <th></th>
-                                                <th>LOTE</th>
-                                                <th>DESC</th>
-                                                <th>P. UNITARIO</th>
-                                                <th>IMPORTE</th>
+                                                <td>
+                                                    <span t-esc="l.price_unit"/>
+                                                </td>
+                                                <td>
+                                                    <span t-esc="l.product_id.default_code"/>
+                                                </td>
+                                                <td></td>
+                                                <td><span t-esc="l.quantity"/>-
+                                                    <span t-esc="l.product_id.name"/>
+                                                </td>
+                                                <td></td>
+                                                <t t-foreach="o.cce_mercancias" t-as="l2">
+                                                    <td>
+                                                        <span t-field="l2.unidadAduana"/>
+                                                    </td>
+                                                    <td>
+                                                        <span t-field="l2.fraccionarancelaria"/>
+                                                    </td>
+                                                    <td>
+                                                        <span t-field="l2.cantidadaduana"/>
+                                                    </td>
+                                                    <td>
+                                                        <span t-field="l2.valordolares"/>
+                                                    </td>
+                                                </t>
                                             </tr>
                                             <tr>
-                                                <th>UNIDAD</th>
-                                                <th>CVE PROD. SERV</th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th>REFERENCIA</th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
+                                                <td>
+                                                    <span t-esc="l.product_uom_id.name"/>
+                                                </td>
+                                                <td>
+                                                    <span t-esc="l.product_id.clave_producto"/>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
                                             </tr>
                                             <tr>
-                                                <th>FECHA FAB.</th>
-                                                <th>FECHA EMP.</th>
-                                                <th></th>
-                                                <th>CAJAS</th>
-                                                <th></th>
-                                                <th style="font-size:10px;">UNIDAD ADUANA</th>
-                                                <th style="font-size:10px;">FRACC. ARANCELARIA</th>
-                                                <th style="font-size:10px;">VAL. ADUANA</th>
-                                                <th style="font-size:10px;">VAL. DOLARES</th>
+                                                <td>sin dato</td>
+                                                <td>sin dato</td>
+                                                <t t-foreach="o.cce_mercancias" t-as="l3">
+                                                    <td>
+                                                        <span t-field="l3.info_mercancias"/>
+                                                    </td>
+                                                </t>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
                                             </tr>
-                                        </thead>
-                                        <tbody>
-                                            <t t-foreach="o.invoice_line_ids" t-as="l">
-                                                <tr>
-                                                    <td>
-                                                        <span t-esc="l.price_unit"/>
-                                                    </td>
-                                                    <td>
-                                                        <span t-esc="l.product_id.default_code"/>
-                                                    </td>
-                                                    <td></td>
-                                                    <td><span t-esc="l.quantity"/>-
-                                                        <span t-esc="l.product_id.name"/>
-                                                    </td>
-                                                    <td></td>
-                                                    <t t-foreach="o.cce_mercancias" t-as="l2">
-                                                        <td>
-                                                            <span t-field="l2.unidadAduana"/>
-                                                        </td>
-                                                        <td>
-                                                            <span t-field="l2.fraccionarancelaria"/>
-                                                        </td>
-                                                        <td>
-                                                            <span t-field="l2.cantidadaduana"/>
-                                                        </td>
-                                                        <td>
-                                                            <span t-field="l2.valordolares"/>
-                                                        </td>
-                                                    </t>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <span t-esc="l.product_uom_id.name"/>
-                                                    </td>
-                                                    <td>
-                                                        <span t-esc="l.product_id.clave_producto"/>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>sin dato</td>
-                                                    <td>sin dato</td>
-                                                    <t t-foreach="o.cce_mercancias" t-as="l3">
-                                                        <td>
-                                                            <span t-field="l3.info_mercancias"/>
-                                                        </td>
-                                                    </t>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                            </t>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                        </t>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="row mt-3">
-                                <div class="col-12">
-                                    <table id="tabla1" style="font-size:12px;">
-                                        <tr>
-                                            <td>IMPORTE TOTAL CON LETRA</td>
-                                            <td></td>
-                                            <td>Subtotal</td>
-                                            <td></td>
-                                            <td>
-                                                <span t-field="o.amount_untaxed"/>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>DOLARES 74/100 USD</td>
-                                            <td></td>
-                                            <td>Descuento</td>
-                                            <td></td>
-                                            <td>$0.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>$0.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ESTE DOCUMENTO ES UNA REPRESENTACION IMPRESA DE UN CFDI</td>
-                                            <td></td>
-                                            <td>Total</td>
-                                            <td></td>
-                                            <td>
-                                                <span t-field="o.amount_total"/>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <table id="tabla1" style="font-size:12px;">
+                                    <tr>
+                                        <td>IMPORTE TOTAL CON LETRA</td>
+                                        <td></td>
+                                        <td>Subtotal</td>
+                                        <td></td>
+                                        <td>
+                                            <span t-field="o.amount_untaxed"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span t-esc="o._total_en_letra()"/>
+                                            DOLARES 74/100 USD
+                                        </td>
+                                        <td></td>
+                                        <td>Descuento</td>
+                                        <td></td>
+                                        <td>$0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>$0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ESTE DOCUMENTO ES UNA REPRESENTACION IMPRESA DE UN CFDI</td>
+                                        <td></td>
+                                        <td>Total</td>
+                                        <td></td>
+                                        <td>
+                                            <span t-field="o.amount_total"/>
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
-                            <div class="row" style="page-break-before: always;">
-                                <div class="col-12" style="margin-top:470px;">
-                                    <table id="tabla1" style="font-size:12px;">
-                                        <tr>
-                                            <td>
-                                                OPERACION VIRTUAL AL AMPARO DEL ART. 29 FRACCIÓN I DE LA LEY DEL
-                                                IVA
-                                                EN
-                                                VIGOR Y DE LAS REGLAS 3.1.8, 4.3.21, 5.2.5 FRACCIÓN II Y 5.2.6
-                                                DE
-                                                LAS
-                                                RGCE VIGENTES Y SUS MODIFICACIONES.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                BORGWARNER COMERCIALIZADORA PDS S. DE R.L. DE C.V.: IMMEX
-                                                310-2013,
-                                                BENEFICIADORA DE ALAMBRES Y METALES, S.A. DE C.V. BAM7810201G0
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
+                        </div>
+                        <div class="row" style="page-break-before: always;">
+                            <div class="col-12" style="margin-top:470px;">
+                                <table id="tabla1" style="font-size:12px;">
+                                    <tr>
+                                        <td>
+                                            OPERACION VIRTUAL AL AMPARO DEL ART. 29 FRACCIÓN I DE LA LEY DEL
+                                            IVA
+                                            EN
+                                            VIGOR Y DE LAS REGLAS 3.1.8, 4.3.21, 5.2.5 FRACCIÓN II Y 5.2.6
+                                            DE
+                                            LAS
+                                            RGCE VIGENTES Y SUS MODIFICACIONES.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            BORGWARNER COMERCIALIZADORA PDS S. DE R.L. DE C.V.: IMMEX
+                                            310-2013,
+                                            BENEFICIADORA DE ALAMBRES Y METALES, S.A. DE C.V. BAM7810201G0
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
-                            <div class="row mt-3">
-                                <div class="col-12">
-                                    <table id="tabla1" style="font-size:12px;">
-                                        <tr>
-                                            <td colspan="11" style="font-size:20px;">
-                                                Complemento de comercio exterior
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tipo Operación:</td>
-                                            <td>
-                                                <span t-field="o.cce_tipooperacion"/>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>Clave Pendimiento:</td>
-                                            <td>
-                                                <span t-field="o.cce_clavedepedimento"/>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>Certificado Origen:</td>
-                                            <td>
-                                                <span t-field="o.cce_numcertificadoorigen"/>
-                                            </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Subdivisión</td>
-                                            <td>
-                                                <span t-field="o.cce_subdivision"/>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>Incoterm</td>
-                                            <td>
-                                                <span t-field="o.cce_incoterm"/>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Total USD:</td>
-                                            <td>
-                                                <span t-field="o.cce_totalusd"/>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>Tipo cambio:</td>
-                                            <td>
-                                                <span t-field="o.cce_tipocambiousd"/>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                    </table>
-                                </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <table id="tabla1" style="font-size:12px;">
+                                    <tr>
+                                        <td colspan="11" style="font-size:20px;">
+                                            Complemento de comercio exterior
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tipo Operación:</td>
+                                        <td>
+                                            <span t-field="o.cce_tipooperacion"/>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Clave Pendimiento:</td>
+                                        <td>
+                                            <span t-field="o.cce_clavedepedimento"/>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Certificado Origen:</td>
+                                        <td>
+                                            <span t-field="o.cce_numcertificadoorigen"/>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Subdivisión</td>
+                                        <td>
+                                            <span t-field="o.cce_subdivision"/>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Incoterm</td>
+                                        <td>
+                                            <span t-field="o.cce_incoterm"/>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total USD:</td>
+                                        <td>
+                                            <span t-field="o.cce_totalusd"/>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Tipo cambio:</td>
+                                        <td>
+                                            <span t-field="o.cce_tipocambiousd"/>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
                             </div>
-                            <div class="row mt-3">
-                                <div class="col-12">
-                                </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
                             </div>
-                            <div class="row mt-3">
-                                <div class="col-12">
-                                    <table id="tabla1" style="font-size:12px;">
-                                        <tr>
-                                            <td colspan="4" style="text-align: justify;">PAGARÉ SIN PROTESTO,
-                                                DEBO Y
-                                                PAGARÉ
-                                                INCONDICIONALMENTE A BENEFICIADORA DE
-                                                ALAMBRES Y METALES S.A. DE C.V. EN ESTA PLAZA O EN CUALQUIER
-                                                OTRA
-                                                PARTE
-                                                QUE
-                                                SE ME REQUIERA, INCLUSIVE DE MANERA JUDICIAL EL DIA
-                                                02-abril-2022,
-                                                LA
-                                                CANTIDAD DE SETECIENTOS CUARENTA Y CINCO DOLARES 74/100 USD,
-                                                VALOR
-                                                RECIBIDO
-                                                EN MERCANCIA A MI ENTERA SATISFACCION. ESTE PAGARE CAUSARÁ UN
-                                                INTERES
-                                                DEL
-                                                5.00% MENSUAL A PARTIR DE SU EXPEDICIÓN DUPLICANDOSE EN CASO DE
-                                                DEMORA.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="4" class="text-center">IRAPUATO, GTO. A 10/01/2022
-                                                02:52:38
-                                                p.m.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">
-                                                _______________________________________________
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td class="text-center">
-                                                _______________________________________________
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">NOMBRE</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td class="text-center">FIRMA</td>
-                                        </tr>
-                                    </table>
-                                </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <table id="tabla1" style="font-size:12px;">
+                                    <tr>
+                                        <td colspan="4" style="text-align: justify;">PAGARÉ SIN PROTESTO,
+                                            DEBO Y
+                                            PAGARÉ
+                                            INCONDICIONALMENTE A BENEFICIADORA DE
+                                            ALAMBRES Y METALES S.A. DE C.V. EN ESTA PLAZA O EN CUALQUIER
+                                            OTRA
+                                            PARTE
+                                            QUE
+                                            SE ME REQUIERA, INCLUSIVE DE MANERA JUDICIAL EL DIA
+                                            <span t-field="o.invoice_date"/>,
+                                            LA
+                                            CANTIDAD DE
+                                            <span t-esc="o._total_en_letra()"/>
+                                            DOLARES 74/100 USD,
+                                            VALOR
+                                            RECIBIDO
+                                            EN MERCANCIA A MI ENTERA SATISFACCION. ESTE PAGARE CAUSARÁ UN
+                                            INTERES
+                                            DEL
+                                            5.00% MENSUAL A PARTIR DE SU EXPEDICIÓN DUPLICANDOSE EN CASO DE
+                                            DEMORA.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="text-center">IRAPUATO, GTO. A
+                                            <span t-esc="o._fecha_actual()"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            _______________________________________________
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="text-center">
+                                            _______________________________________________
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">NOMBRE</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="text-center">FIRMA</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <div class="row mt-3">
-                                <div class="col-12">
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
 
-                                </div>
                             </div>
+                        </div>
 
                     </t>
                 </t>
