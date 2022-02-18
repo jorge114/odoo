@@ -67,7 +67,7 @@
                                     </center>
                                 </div>
                                 <div style="padding-top: 5px;">
-                                    <span style="font-size: 13px;">No.</span><span t-esc="o.requisicion.upper()"/>
+                                    <span style="font-size: 13px;">No.</span><span t-if="o.requisicion" t-esc="o.requisicion.upper()"/>
                                 </div>
                                 <div style="padding-top: 5px;">
                                     <center>
