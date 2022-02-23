@@ -49,7 +49,7 @@
                                 </div>
                             </div>
                             <div class="col-3" style="border: solid; border-radius: 10px; border-width: 2px;">
-                                <div>
+                                <div style="padding-top: 10px;">
                                     <center>
                                         <span style="font-size: 13px; display: block; font-weight: bold; margin-top: 6%;}">ORDEN DE COMPRA /</span>
                                         <span style="font-size: 13px; display: block; font-weight: bold;}">PURCHASE ORDER</span>
@@ -60,14 +60,6 @@
                                     <span style="width: 70%; text-align: center; display: inline-block;">
                                         <span t-esc="o.name" style="font-size: 18px !important; font-weight: bold; font-size: 15px; color: red;"/>
                                     </span>
-                                </div>
-                                <div style="padding-top: 5px;">
-                                    <center>
-                                        <span style="font-size: 13px; display: block; font-weight: bold;}">REQUISICIÓN / REQUISITION</span>
-                                    </center>
-                                </div>
-                                <div style="padding-top: 5px;">
-                                    <span style="font-size: 13px;">No.</span><span t-if="o.requisicion" t-esc="o.requisicion.upper()"/>
                                 </div>
                                 <div style="padding-top: 5px;">
                                     <center>
@@ -86,60 +78,60 @@
                         <div style="border: solid; border-radius: 10px; margin: 0; border-width: 2px;">
                             <div class="row" style="padding-top:10px">
                                 <div class="col-3">
-                                    <span style="font-size: 15px; font-weight: bold; padding-left: 20px;">COMPAÑIA / COMPANY</span>
+                                    <span style="font-size: 14px; font-weight: bold; padding-left: 20px;">COMPAÑIA / COMPANY</span>
                                 </div>
                                 <div class="col-9">
-                                    <span t-esc="o.partner_id.name.upper()"/>
+                                    <span style="font-size: 14px;" t-esc="o.partner_id.name.upper()"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-3">
-                                    <span style="font-size: 15px; font-weight: bold; padding-left: 20px;">DIRECCIÓN / ADDRESS</span>
+                                    <span style="font-size: 14px; font-weight: bold; padding-left: 20px;">DIRECCIÓN / ADDRESS</span>
                                 </div>
                                 <div class="col-9">
-                                    <span t-if="o.partner_id.street_name" t-esc="o.partner_id.street_name.upper()"/><br/>
-                                    <span t-if="o.partner_id.street2" t-esc="o.partner_id.street2.upper()"/>
-                                    <span t-if="o.partner_id.zip" style="padding-left: 15px;">C.P. <t t-esc="o.partner_id.zip.upper()"/></span>
-                                    <span t-if="o.partner_id.city" style="padding-left: 15px;"><t t-esc="o.partner_id.city.upper()"/>,</span>
-                                    <span t-if="o.partner_id.state_id" t-esc="o.partner_id.state_id.name.upper()"/><br/>
+                                    <span style="font-size: 14px;" t-if="o.partner_id.street_name" t-esc="o.partner_id.street_name.upper()"/><br/>
+                                    <span style="font-size: 14px;" t-if="o.partner_id.street2" t-esc="o.partner_id.street2.upper()"/>
+                                    <span t-if="o.partner_id.zip" style="padding-left: 15px; font-size: 14px;">C.P. <t t-esc="o.partner_id.zip.upper()"/></span>
+                                    <span t-if="o.partner_id.city" style="padding-left: 15px; font-size: 14px;"><t t-esc="o.partner_id.city.upper()"/>,</span>
+                                    <span style="font-size: 14px;" t-if="o.partner_id.state_id" t-esc="o.partner_id.state_id.name.upper()"/><br/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-3">
-                                    <span style="font-size: 15px; font-weight: bold; padding-left: 20px;">ATENCIÓN / AT´N</span>
+                                    <span style="font-size: 14px; font-weight: bold; padding-left: 20px;">ATENCIÓN / AT´N</span>
                                 </div>
                                 <div class="col-9">
-                                    <span t-if="o.contacto.name" t-field="o.contacto.name"/>
+                                    <span style="font-size: 14px;" t-if="o.contacto.name" t-field="o.contacto.name"/>
                                 </div>
                             </div>
                             <div class="row" style="padding-bottom: 10px">
                                 <div class="col-3">
-                                    <span style="font-size: 15px; font-weight: bold; padding-left: 20px;">TELEFONO / PHONE</span>
+                                    <span style="font-size: 14px; font-weight: bold; padding-left: 20px;">TELEFONO / PHONE</span>
                                 </div>
                                 <div class="col-3">
-                                    <span t-if="o.partner_id.phone" t-esc="o.partner_id.phone.upper()"/>
+                                    <span style="font-size: 14px;" t-if="o.partner_id.phone" t-esc="o.partner_id.phone.upper()"/>
                                 </div>
                                 <div class="col-3">
-                                    <span style="font-size: 15px; font-weight: bold;">PROVEEDOR / SUPPLIER No.</span>
+                                    <span style="font-size: 14px; font-weight: bold;">PROVEEDOR / SUPPLIER No.</span>
                                 </div>
                                 <div class="col-3">
-                                    <span t-if="o.partner_id.numero_proveedor" t-esc="o.partner_id.numero_proveedor.upper()"/>
+                                    <span style="font-size: 14px;" t-if="o.partner_id.numero_proveedor" t-esc="o.partner_id.numero_proveedor.upper()"/>
                                 </div>
                             </div>
                         </div>
 
                         <div style="border: solid; border-radius: 10px; margin: 0; border-width: 2px; margin-top: 20px">
                             <div>
-                                <span style="font-size: 15px; font-weight: bold; padding-left: 20px;">ENTREGAR EN / DELIVERY ADDRESS</span>
+                                <span style="font-size: 14px; font-weight: bold; padding-left: 20px;">ENTREGAR EN / DELIVERY ADDRESS</span>
                             </div>
                             <div class="row" style="border-bottom: solid; margin: 0; border-width: 2px;">
                                 <div class="col-12">
                                     <center>
-                                    <span t-if="o.street_id.street" t-esc="o.street_id.street.upper()"/><br/>
-                                    <span t-if="o.street_id.street2" t-esc="o.street_id.street2" /><br/>
-                                    <span t-if="o.street_id.city" t-esc="o.street_id.city.upper()"/><br/>
-                                    <span t-if="o.street_id.state_id" t-esc="o.street_id.state_id.name.upper()"/><br/>
-                                    <span t-if="o.street_id.zip" />C.P. <t t-esc="o.street_id.zip.upper()"/><br/>
+                                        <span style="font-size: 14px;" t-if="o.street_id.street" t-esc="o.street_id.street.upper()"/>
+                                        <span style="font-size: 14px;" t-if="o.street_id.street2" t-esc="o.street_id.street2"/>
+                                        <span style="font-size: 14px;" t-if="o.street_id.city" t-esc="o.street_id.city.upper()"/>
+                                        <span style="font-size: 14px;" t-if="o.street_id.state_id" t-esc="o.street_id.state_id.name.upper()"/>
+                                        <span style="font-size: 14px;" t-if="o.street_id.zip">C.P. <t t-if="o.street_id.zip" t-esc="o.street_id.zip.upper()"/></span>
                                     </center>
                                 </div>
                             </div>
@@ -147,22 +139,20 @@
                                 <div class="col-6" style="border-right: solid; margin: 0; border-width: 2px;">
                                     <center>
                                         <div>
-                                            <span style="font-size: 15px; font-weight: bold; padding-left: 20px;">TIPO TRANSPORTE / TRASPORTATION</span>
+                                            <span style="font-size: 14px; font-weight: bold; padding-left: 20px;">TIPO MONEDA</span>
                                         </div>
                                         <div>
-                                            <span style="font-size: 15px; font-weight: bold;"></span>
-                                            <span t-if="o.transporte" /> <t t-esc="o.transporte"/><br/>
+                                            <span style="font-size: 14px;" t-field="o.currency_id.name"/>
                                         </div>
                                     </center>
                                 </div>
                                 <div class="col-6">
                                     <center>
                                         <div>
-                                            <span style="font-size: 15px; font-weight: bold; padding-left: 20px;">CONDICIONES PAGO / PAYMENT CONDITIONS</span>
+                                            <span style="font-size: 14px; font-weight: bold; padding-left: 20px;">CONDICIONES PAGO / PAYMENT CONDITIONS</span>
                                         </div>
                                         <div>
-                                            <span style="font-size: 15px; font-weight: bold;"></span>
-                                            <span t-if="o.payment_term_id.name" /> <t t-esc="o.payment_term_id.name.upper()"/><br/>
+                                            <span style="font-size: 14px;" t-if="o.payment_term_id" t-esc="o.payment_term_id.name.upper()"/>
                                         </div>
                                     </center>
                                 </div>
@@ -174,36 +164,36 @@
                                 <thead>
                                     <tr>
                                         <th style="width: 5%;"></th>
-                                        <th style="width: 10%; text-align: center;">CANTIDAD</th>
-                                        <th style="width: 10%; text-align: center;">UNIDAD</th>
-                                        <th style="width: 10%; text-align: center;">CODIGO</th>
-                                        <th style="width: 35%; text-align: center;">DESCRIPCIÓN</th>
-                                        <th style="width: 10%; text-align: center;">PRECIO</th>
-                                        <th style="width: 10%; text-align: center;">FECHA</th>
-                                        <th style="width: 10%; text-align: center;">IMPORTE</th>
+                                        <th style="width: 10%; text-align: center; font-size: 14px;">CANTIDAD</th>
+                                        <th style="width: 10%; text-align: center; font-size: 14px;">UNIDAD</th>
+                                        <th style="width: 10%; text-align: center; font-size: 14px;">CODIGO</th>
+                                        <th style="width: 35%; text-align: center; font-size: 14px;">DESCRIPCIÓN</th>
+                                        <th style="width: 10%; text-align: center; font-size: 14px;">PRECIO</th>
+                                        <th style="width: 10%; text-align: center; font-size: 14px;">FECHA</th>
+                                        <th style="width: 10%; text-align: center; font-size: 14px;">IMPORTE</th>
                                     </tr>
                                     <tr>
                                         <th style="border-bottom: 2px solid; width: 5%;"></th>
-                                        <th style="border-bottom: 2px solid; width: 10%; text-align: center;">QUANTITY</th>
-                                        <th style="border-bottom: 2px solid; width: 10%; text-align: center;">UNIT</th>
-                                        <th style="border-bottom: 2px solid; width: 10%; text-align: center;">ITEM</th>
-                                        <th style="border-bottom: 2px solid; width: 35%; text-align: center;">DESCRIPTION</th>
-                                        <th style="border-bottom: 2px solid; width: 10%; text-align: center;">PRICE</th>
-                                        <th style="border-bottom: 2px solid; width: 10%; text-align: center;">ENTREGA</th>
-                                        <th style="border-bottom: 2px solid; width: 10%; text-align: center;">AMOUNT</th>
+                                        <th style="border-bottom: 2px solid; width: 10%; text-align: center; font-size: 14px;">QUANTITY</th>
+                                        <th style="border-bottom: 2px solid; width: 10%; text-align: center; font-size: 14px;">UNIT</th>
+                                        <th style="border-bottom: 2px solid; width: 10%; text-align: center; font-size: 14px;">ITEM</th>
+                                        <th style="border-bottom: 2px solid; width: 35%; text-align: center; font-size: 14px;">DESCRIPTION</th>
+                                        <th style="border-bottom: 2px solid; width: 10%; text-align: center; font-size: 14px;">PRICE</th>
+                                        <th style="border-bottom: 2px solid; width: 10%; text-align: center; font-size: 14px;">ENTREGA</th>
+                                        <th style="border-bottom: 2px solid; width: 10%; text-align: center; font-size: 14px;">AMOUNT</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <t t-set="contador" t-value="1"/>
                                     <tr t-foreach="o.order_line" t-as="l">
-                                        <td style="font-size: 13px; text-align: center;"><t t-esc="contador"/></td>
-                                        <td style="font-size: 13px; text-align: center;"><t t-esc="'{:.3f}'.format(l.product_qty)"/></td>
-                                        <td style="font-size: 13px; text-align: center;"><t t-esc="l.product_uom.name"/></td>
-                                        <td style="font-size: 13px; text-align: center;"><t t-esc="l.product_id.default_code"/></td>
-                                        <td style="font-size: 13px; text-align: center;"><t t-esc="l.product_id.name"/></td>
-                                        <td class="text-right" style="font-size: 13px; text-align: center; padding-right: 10px"><t t-esc="'{:.2f}'.format(l.price_unit)"/></td>
-                                        <td style="font-size: 13px; text-align: center;"><span t-if="o.date_planned" t-esc="o.date_planned"/></td>
-                                        <td class="text-right" style="font-size: 13px; text-align: center; padding-right: 10px;"><t t-esc="'{:.2f}'.format(l.price_subtotal)"/></td>
+                                        <td style="font-size: 12px; text-align: center;"><t t-esc="contador"/></td>
+                                        <td style="font-size: 12px; text-align: center;"><t t-esc="'{:.3f}'.format(l.product_qty)"/></td>
+                                        <td style="font-size: 12px; text-align: center;"><t t-esc="l.product_uom.name"/></td>
+                                        <td style="font-size: 12px; text-align: center;"><t t-esc="l.product_id.default_code"/></td>
+                                        <td style="font-size: 12px; text-align: center;"><t t-esc="l.product_id.name"/></td>
+                                        <td class="text-right" style="font-size: 12px; text-align: center; padding-right: 10px"><t t-esc="'{:.2f}'.format(l.price_unit)"/></td>
+                                        <td style="font-size: 12px; text-align: center;"><span t-if="o.date_planned" t-esc="o.date_planned.strftime('%d-%m-%Y')"/></td>
+                                        <td class="text-right" style="font-size: 12px; text-align: center; padding-right: 10px;"><t t-esc="'{:.2f}'.format(l.price_subtotal)"/></td>
                                         <t t-set="contador" t-value="contador + 1"/>
                                     </tr>
                                 </tbody>
@@ -238,10 +228,10 @@
 
                         <div style="border: solid; border-radius: 10px; margin: 0; border-width: 2px; margin-top: 20px">
                             <div>
-                                <span style="font-size: 15px; font-weight: bold; padding-left: 20px;">COMENTARIOS / COMMENTS</span>
+                                <span style="font-size: 14px; font-weight: bold; padding-left: 20px;">COMENTARIOS / COMMENTS</span>
                             </div>
                             <div>
-                                <span style="font-size: 15px; font-weight: bold; padding-left: 20px;" t-field="o.notes"/>
+                                <span style="font-size: 14px; font-weight: bold; padding-left: 20px;" t-field="o.notes"/>
                             </div>
                         </div>
 
@@ -251,83 +241,29 @@
                                     <div class="row">
                                         <div class="col-5">
                                             <div>
-                                                <span style="padding-left: 20px;">PARA USARSE EN</span>
+                                                <span style="font-size: 14px; padding-left: 20px;">PARA USARSE EN</span>
                                             </div>
                                             <div>
-                                                <span style="padding-left: 20px;">TO BE USED FOR</span>
+                                                <span style="font-size: 14px; padding-left: 20px;">TO BE USED FOR</span>
                                             </div>
                                         </div>
                                         <div class="col-7">
-                                            <span style="padding-left: 20px;"></span>
-                                            <span t-if="o.uso" t-field="o.uso"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="row">
-                                        <div class="col-9">
-                                            <div>
-                                                <span>NIVEL DE AUTORIZACIÓN REQUERIDO</span>
-                                            </div>
-                                            <div>
-                                                <span>AUTHORIZED LEVEL REQUIRED</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <span style="padding-right: 10px"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div style="border: solid; border-radius: 10px; margin: 0; border-width: 2px; margin-top: 20px">
-                            <div class="row">
-                                <div class="col-6" style="border-right: solid; border-width: 2px;">
-                                    <div>
-                                        <span style="padding-left: 20px;">AUTORIZACIONES / AUTHORIZATIONS</span>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div>
-                                                <span style="padding-left: 20px;"></span>
-                                                <span style="padding-left: 20px;"></span>
-                                            </div>
-                                            <div>
-                                                <span style="padding-left: 20px;"></span>
-                                                <span style="padding-left: 20px;"></span>
-                                            </div>
-                                            <div>
-                                                <span style="padding-left: 20px;"></span>
-                                                <span style="padding-left: 20px;"></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div>
-                                                <span></span>
-                                                <span style="padding-left: 20px;"></span>
-                                            </div>
-                                            <div>
-                                                <span></span>
-                                                <span style="padding-left: 20px;"></span>
-                                            </div>
+                                            <span style="font-size: 14px;" t-if="o.uso" t-field="o.uso"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <center>
                                         <div>
-                                            <span>TODO ASUNTO RELACIONADO CON ÉSTA ORDEN DEBERÁ TRABAJARSE CON</span>
+                                            <span style="font-size: 14px;">TODO ASUNTO RELACIONADO CON ÉSTA ORDEN DEBERÁ TRABAJARSE CON</span>
                                         </div>
                                         <div>
-                                            <br/><span style="padding-top: 50px !important;"></span>
-                                            <span t-if="o.contacto.name" t-field="o.contacto.name"/>
+                                            <span style="padding-top: 50px !important; font-size: 14px;" t-if="o.user_id" t-field="o.user_id.name"/>
                                         </div>
                                     </center>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </t>
             </t>

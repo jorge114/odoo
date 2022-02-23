@@ -10,3 +10,4 @@ class MrpWorkcenter(models.Model):
         comodel_name='ir.sequence',
         string='Secuencia'
     )
+    concatenar = fields.Boolean(string='Concatenar lotes')

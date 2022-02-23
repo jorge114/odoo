@@ -8,18 +8,12 @@
         <field name="inherit_id" ref="purchase.purchase_order_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='partner_ref']" position="after">
-               <field name="street_id"/>
-            </xpath>
-            <xpath expr="//field[@name='date_order']" position="before">
-               <field name="requisicion"/>
+               <field name="street_id" domain="[('type', '=', 'delivery'), ('parent_id', '=', partner_id)]" options="{'no_create': True}"/>
             </xpath>
             <xpath expr="//field[@name='street_id']" position="after">
-               <field name="contacto" widget="selection"/>
+               <field name="contacto" domain="[('type', '=', 'contact'), ('parent_id', '=', partner_id)]" options="{'no_create': True}"/>
             </xpath>
             <xpath expr="//field[@name='fiscal_position_id']" position="after">
-               <field name="transporte"/>
-            </xpath>
-            <xpath expr="//field[@name='transporte']" position="after">
                <field name="uso"/>
             </xpath>
          </field>

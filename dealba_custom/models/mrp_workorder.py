@@ -6,7 +6,7 @@ from odoo import api, fields, models
 class MrpWorkorder(models.Model):
     _inherit = "mrp.workorder"
 
-    @api.depends('workcenter_id', 'variacion_ids')
+    @api.depends('workcenter_id', 'variacion_ids', 'lot_id')
     def _compute_secuencia_dealba(self):
         for record in self:
             secuencia_id = record.workcenter_id.secuencia_id
@@ -17,7 +17,10 @@ class MrpWorkorder(models.Model):
                 for variacion_id in record.variacion_ids:
                     variacion = "{0}/{1}".format(variacion, variacion_id.codigo)
                 sufijo = secuencia_id.suffix
-                record.secuencia_dealba = "{0}{1}{2} - {3}".format(prefijo, numero, variacion, sufijo)
+                if record.workcenter_id.concatenar:
+                    record.secuencia_dealba = "{0}.{1}{2}{3} - {4}".format(record.lot_id.name, prefijo, numero, variacion, sufijo)
+                else:
+                    record.secuencia_dealba = "{0}{1}{2} - {3}".format(prefijo, numero, variacion, sufijo)
 
     secuencia_dealba = fields.Char(
         string='Secuencia Dealba:',

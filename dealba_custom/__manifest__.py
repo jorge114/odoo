@@ -15,6 +15,7 @@
         'sale_management',
         'sale_project',
         'mrp_workorder',
+        'purchase',
     ],
     'data': [
         'data/project_task_type_data.xml',
