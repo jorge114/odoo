@@ -11,7 +11,7 @@
                <field name="street_id" domain="[('type', '=', 'delivery')]" options="{'no_create': True}"/>
             </xpath>
             <xpath expr="//field[@name='street_id']" position="after">
-               <field name="contacto" domain="[('type', '=', 'contact')('partner_id', '=', 'company_id]" options="{'no_create': True}"/>
+               <field name="contacto" domain="[('type', '=', 'contact')('partner_id', '=', 'company_id']" options="{'no_create': True}"/>
             </xpath>
             <xpath expr="//field[@name='fiscal_position_id']" position="after">
                <field name="uso"/>
