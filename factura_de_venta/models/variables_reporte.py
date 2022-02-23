@@ -33,7 +33,7 @@ class ReportePersonalizado(models.Model):
         return MAY_direccion2
 
     def _RFC_company(self):
-        rfc = str('R.F.C. ' + self.company_id.vat)
+        rfc = str('R.F.C. ' + 'self.company_id.vat')
         MAY_rfc = rfc.upper()
         return MAY_rfc
 
