@@ -17,12 +17,12 @@ class ReportePersonalizado(models.Model):
         return MAY_company
 
     def _direccion_company(self):
-        direccion = str(self.company_id.street_name)
+        direccion = str(self.company_id.street_name + self.company_id.street_number)
         MAY_direccion = direccion.upper()
         return MAY_direccion
 
     def _direccion_company2(self):
-        direccion3 = str(self.company_id.street_number + self.company_id.street2)
+        direccion3 = str(self.company_id.street2)
         MAY_direccion3 = direccion3.upper()
         return MAY_direccion3
 
