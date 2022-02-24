@@ -8,7 +8,7 @@
         <field name="inherit_id" ref="purchase.purchase_order_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='partner_ref']" position="after">
-               <field name="street_id" domain="[('type', '=', 'delivery')]" options="{'no_create': True}"/>
+               <field name="street_id" domain="[('type', '=', 'delivery')]"/>
             </xpath>
             <xpath expr="//field[@name='street_id']" position="after">
                <field name="contacto" domain="[('type', '=', 'contact'), ('parent_id', '=', res.partner.partner_id)]" options="{'no_create': True}"/>
