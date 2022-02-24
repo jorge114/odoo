@@ -11,7 +11,7 @@
                <field name="street_id" domain="[('type', '=', 'delivery')]" options="{'no_create': True}"/>
             </xpath>
             <xpath expr="//field[@name='street_id']" position="after">
-                <field name="contacto" widget="res_partner_many2one" context="{'res_partner_search_mode': 'contact', 'show_vat': True}" placeholder="Name, TIN, Email, or Reference"/>
+                <field name="contacto" widget="res_partner_many2one" context="{'res_partner_search_mode': 'contact', 'show_vat': True}" placeholder="Name, TIN, Email, or Reference" domain="{'type', '=', 'contact'}"/>
             </xpath>
             <xpath expr="//field[@name='fiscal_position_id']" position="after">
                <field name="uso"/>
