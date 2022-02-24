@@ -11,7 +11,7 @@
                <field name="street_id" domain="[('type', '=', 'delivery')]" options="{'no_create': True}"/>
             </xpath>
             <xpath expr="//field[@name='street_id']" position="after">
-                <field name="contacto" widget="res_partner_many2one" domain="{('type', '=', 'contact'),('partner_id' ,'=', 'Partner_id')}"/>
+                <field name="contacto" widget="res_partner_many2one" domain="{('type', '=', 'contact'),('partner_id' ,'=', 'Parent_id')}"/>
             </xpath>
             <xpath expr="//field[@name='fiscal_position_id']" position="after">
                <field name="uso"/>
