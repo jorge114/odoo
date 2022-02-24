@@ -11,7 +11,7 @@ class Datos(models.Model):
         string="Direccion de Entrega",
     )
     contacto = fields.Many2one(
-        comodel_name='res.partner',
+        comodel_name='res.users',
         string='En atención a:',
     )
     uso = fields.Selection(selection=[
