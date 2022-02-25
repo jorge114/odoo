@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+ <record id="view_task_kanban_inherit_dealba_custom_new" model="ir.ui.view">
+        <field name="name">view.task.kanban.inherit.dealba.custom.new</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//progressbar" position="attributes">
+                <attribute name="colors">{"normal": "muted", "done": "success", "blocked": "danger"}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

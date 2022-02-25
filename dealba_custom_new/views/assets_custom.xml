@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="assets_backend_inherit_dealba_custom_new" inherit_id="dealba_custom.assets_backend_inherit_dealba_custom">
+        <script type="text/javascript" src="/dealba_custom/static/src/js/state_selection_widget.js" position="replace">
+            <script type="text/javascript" src="/dealba_custom_new/static/src/js/state_selection_widget_custom.js"/>
+           
+        </script>
+    </template>
+
+</odoo>
