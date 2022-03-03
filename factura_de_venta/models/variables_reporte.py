@@ -12,46 +12,46 @@ class ReportePersonalizado(models.Model):
     _inherit = 'account.move'
 
     def _companyLetraMayuscula(self):
-        company = str('self.company_id.name')
+        company = self.company_id.name
         MAY_company = company.upper()
         return MAY_company
 
     def _direccion_company(self):
-        direccion = str('self.company_id.street_name' + 'self.company_id.street_number')
+        direccion = self.company_id.street_name
         MAY_direccion = direccion.upper()
         return MAY_direccion
 
     def _direccion_company2(self):
-        direccion3 = str('self.company_id.street2')
+        direccion3 = str(self.company_id.street_number + ' ' + self.company_id.street2)
         MAY_direccion3 = direccion3.upper()
         return MAY_direccion3
 
     def _direccion2_company(self):
         direccion2 = str(
-            'C.P. ' + 'self.company_id.zip' + ' ' + 'self.company_id.city'+ ', ' + 'self.company_id.state_id.name')
+            'C.P. ' + self.company_id.zip + ' ' + self.company_id.city + ', ' + self.company_id.state_id.name)
         MAY_direccion2 = direccion2.upper()
         return MAY_direccion2
 
     def _RFC_company(self):
-        rfc = str('R.F.C. ' + 'self.company_id.vat')
+        rfc = str('R.F.C.' + ' ' + self.company_id.vat)
         MAY_rfc = rfc.upper()
         return MAY_rfc
 
     def _telefono_company(self):
-        telefono = str('+52 ' + 'self.company_id.phone')
+        telefono = str('+52 ' + ' ' + self.company_id.phone)
         MAY_telefono = telefono.upper()
         return MAY_telefono
 
     def _correo_company(self):
-        correo = str('self.company_id.email' + '    ')
+        correo = self.company_id.email
         return correo
 
     def _website_company(self):
-        website = str('self.company_id.website')
+        website = self.company_id.website
         return website
 
     def _company_register(self):
-        register = str('self.company_id.company_registry')
+        register = self.company_id.company_registry
         return register
 
     def _total_en_letra(self):

@@ -7,7 +7,7 @@
     Nomina CFDI Module
     ''',
     'author': 'IT Admin',
-    'version': '14.07',
+    'version': '14.08',
     'category': 'Employees',
     'depends': [
         'om_hr_payroll',

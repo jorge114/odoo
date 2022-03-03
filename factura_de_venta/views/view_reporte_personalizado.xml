@@ -27,7 +27,8 @@
                                     <br/>
                                     <span t-esc="o._telefono_company()"/>
                                     <br/>
-                                    <span t-esc="o._correo_company()"/>
+                                    <span t-esc="o._correo_company()" />
+                                    <span></span>
                                     <span t-esc="o._website_company()"/>
                                     <br/>
                                     <span t-esc="o._company_register()"/>
@@ -104,10 +105,10 @@
                                         <tbody>
                                             <tr>
                                                 <td id="letra1" class="border_right">
-
+                                                    <span t-field="o.numero_cetificado"/>
                                                 </td>
                                                 <td id="letra1" class="border_right">
-
+                                                    <span t-field="o.cetificaso_sat"/>
                                                 </td>
                                                 <td id="letra1" class="border_right">
                                                     <span t-field="o.folio_fiscal"/>
@@ -210,11 +211,40 @@
                             </div>
                         </div>
                         <div class="footer">
-                            <div class="row">
-                                <div class="col-12">
+                            <t t-if="o.folio_fiscal">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div name="cadenas" class="row">
+                                            <div class="col-3 float-left">
+                                                <img t-if="o.selo_digital_cdfi"
+                                                     t-att-src="'data:image/png;base64,%s' % to_text(o.selo_digital_cdfi)"
+                                                     style="height: 190px;width: 190px;padding-left:10px;"/>
+                                            </div>
+                                            <div class="col-9 float-left" style="font-size:12px;">
+                                                <!--CADENA ORIGINAL>  -->
+                                                <strong>Cadena Original del Complemento digital del SAT</strong>
+                                                <br/>
+                                                <span t-field="o.cadena_origenal"
+                                                      style="word-break:break-word;font-size:8px;"/>
+                                                <br/>
 
+                                                <strong>Sello digital del CFDI</strong>
+                                                <br/>
+                                                <span t-field="o.selo_digital_cdfi"
+                                                      style="word-break:break-word;font-size:8px;"/>
+                                                <br/>
+
+                                                <strong>Sello del SAT</strong>
+                                                <br/>
+                                                <span t-field="o.selo_sat"
+                                                      style="word-break:break-word;font-size:8px;"/>
+                                                <br/>
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </t>
                         </div>
                     </xpath>
                     <t t-call="web.external_layout">
@@ -274,20 +304,20 @@
                                                     <span t-esc="l.product_id.name"/>
                                                 </td>
                                                 <td></td>
-                                                <t t-foreach="o.cce_mercancias" t-as="l2">
+                                                <t t-if="o.cce_habilitar_cee">
                                                     <td>
-                                                        <span t-field="l2.unidadAduana"/>
+                                                        <span t-field="l.product_id.unidadAduana"/>
                                                     </td>
                                                     <td>
-                                                        <span t-field="l2.fraccionarancelaria"/>
-                                                    </td>
-                                                    <td>
-                                                        <span t-field="l2.cantidadaduana"/>
-                                                    </td>
-                                                    <td>
-                                                        <span t-field="l2.valordolares"/>
+                                                        <span t-field="l.product_id.fraccionarancelaria"/>
                                                     </td>
                                                 </t>
+                                                <td>
+                                                    <span t-field="l.price_unit"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="l.price_subtotal"/>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -307,11 +337,7 @@
                                             <tr>
                                                 <td>sin dato</td>
                                                 <td>sin dato</td>
-                                                <t t-foreach="o.cce_mercancias" t-as="l3">
-                                                    <td>
-                                                        <span t-field="l3.info_mercancias"/>
-                                                    </td>
-                                                </t>
+                                                <td></td>
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
@@ -443,13 +469,13 @@
                                     <tr>
                                         <td>Total USD:</td>
                                         <td>
-                                            <span t-field="o.cce_totalusd"/>
+                                            <span t-field="o.amount_total"/>
                                         </td>
                                         <td></td>
                                         <td></td>
                                         <td>Tipo cambio:</td>
                                         <td>
-                                            <span t-field="o.cce_tipocambiousd"/>
+                                            <span t-field="o.tipocambio"/>
                                         </td>
                                         <td></td>
                                         <td></td>

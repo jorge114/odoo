@@ -7,10 +7,11 @@
     """,
     'website': 'https://www.kuh7.mx/',
     'author': 'KUH7 SOLUCIONES S.A. DE C.V.',
-    'version': '1.2',
+    'version': '1.4',
     'category': 'Tools',
     'depends': [
         'sale',
+        'account',
     ],
     'data': [
         'views/view_reporte_personalizado.xml',
