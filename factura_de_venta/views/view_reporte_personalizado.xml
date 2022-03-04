@@ -216,9 +216,8 @@
                                     <div class="col-12">
                                         <div name="cadenas" class="row">
                                             <div class="col-3 float-left">
-                                                <img t-if="o.selo_digital_cdfi"
-                                                     t-att-src="'data:image/png;base64,%s' % to_text(o.selo_digital_cdfi)"
-                                                     style="height: 190px;width: 190px;padding-left:10px;"/>
+                                                <img t-if="o.qrcode_image" t-att-src="'data:image/png;base64,%s' % to_text(o.qrcode_image)"
+                                                style="height: 190px;width: 190px;padding-left:10px;" />
                                             </div>
                                             <div class="col-9 float-left" style="font-size:12px;">
                                                 <!--CADENA ORIGINAL>  -->
@@ -252,7 +251,8 @@
                         <xpath expr="." position="inside">
                             <link href="/factura_de_venta/static/src/css/style.css" rel="stylesheet"/>
                         </xpath>
-                        <div class="row" style="margin-top:420px;">
+                        <!-- <div class="row" style="margin-top:420px;"> -->
+                        <div class="row">
                             <div class="col-12">
                                 <table id="tabla1" style="font-size:12px;">
                                     <thead class="border_bottom">
@@ -398,8 +398,9 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="row" style="page-break-before: always;">
-                            <div class="col-12" style="margin-top:470px;">
+                        <!-- <div class="row" style="page-break-before: always;"> -->
+                            <!-- <div class="col-12" style="margin-top:470px;"> -->
+                            <div class="col-12">
                                 <table id="tabla1" style="font-size:12px;">
                                     <tr>
                                         <td>
