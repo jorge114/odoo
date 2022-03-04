@@ -253,7 +253,7 @@
                             <link href="/factura_de_venta/static/src/css/style.css" rel="stylesheet"/>
                         </xpath>
                         <!-- <div class="row" style="margin-top:420px;"> -->
-                        <div class="row">
+                        <div class="row" style="margin-top:420px;">
                             <div class="col-12">
                                 <table id="tabla1" style="font-size:12px;">
                                     <thead class="border_bottom">
@@ -399,9 +399,9 @@
                                 </table>
                             </div>
                         </div>
-                        <!-- <div class="row" style="page-break-before: always;"> -->
+                        <div class="row" style="page-break-before: always;">
                         <!-- <div class="col-12" style="margin-top:470px;"> -->
-                        <div class="col-12">
+                        <div class="col-12" style="margin-top:470px;">
                             <table id="tabla1" style="font-size:12px;">
                                 <tr>
                                     <td>
