@@ -27,7 +27,7 @@
                                     <br/>
                                     <span t-esc="o._telefono_company()"/>
                                     <br/>
-                                    <span t-esc="o._correo_company()" />
+                                    <span t-esc="o._correo_company()"/>
                                     <span></span>
                                     <span t-esc="o._website_company()"/>
                                     <br/>
@@ -216,8 +216,9 @@
                                     <div class="col-12">
                                         <div name="cadenas" class="row">
                                             <div class="col-3 float-left">
-                                                <img t-if="o.qrcode_image" t-att-src="'data:image/png;base64,%s' % to_text(o.qrcode_image)"
-                                                style="height: 190px;width: 190px;padding-left:10px;" />
+                                                <img t-if="o.qrcode_image"
+                                                     t-att-src="'data:image/png;base64,%s' % to_text(o.qrcode_image)"
+                                                     style="height: 190px;width: 190px;padding-left:10px;"/>
                                             </div>
                                             <div class="col-9 float-left" style="font-size:12px;">
                                                 <!--CADENA ORIGINAL>  -->
@@ -399,30 +400,30 @@
                             </div>
                         </div>
                         <!-- <div class="row" style="page-break-before: always;"> -->
-                            <!-- <div class="col-12" style="margin-top:470px;"> -->
-                            <div class="col-12">
-                                <table id="tabla1" style="font-size:12px;">
-                                    <tr>
-                                        <td>
-                                            OPERACION VIRTUAL AL AMPARO DEL ART. 29 FRACCIÓN I DE LA LEY DEL
-                                            IVA
-                                            EN
-                                            VIGOR Y DE LAS REGLAS 3.1.8, 4.3.21, 5.2.5 FRACCIÓN II Y 5.2.6
-                                            DE
-                                            LAS
-                                            RGCE VIGENTES Y SUS MODIFICACIONES.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            BORGWARNER COMERCIALIZADORA PDS S. DE R.L. DE C.V.: IMMEX
-                                            310-2013,
-                                            BENEFICIADORA DE ALAMBRES Y METALES, S.A. DE C.V. BAM7810201G0
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
+                        <!-- <div class="col-12" style="margin-top:470px;"> -->
+                        <div class="col-12">
+                            <table id="tabla1" style="font-size:12px;">
+                                <tr>
+                                    <td>
+                                        OPERACION VIRTUAL AL AMPARO DEL ART. 29 FRACCIÓN I DE LA LEY DEL
+                                        IVA
+                                        EN
+                                        VIGOR Y DE LAS REGLAS 3.1.8, 4.3.21, 5.2.5 FRACCIÓN II Y 5.2.6
+                                        DE
+                                        LAS
+                                        RGCE VIGENTES Y SUS MODIFICACIONES.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        BORGWARNER COMERCIALIZADORA PDS S. DE R.L. DE C.V.: IMMEX
+                                        310-2013,
+                                        BENEFICIADORA DE ALAMBRES Y METALES, S.A. DE C.V. BAM7810201G0
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
+                        <!-- </div> -->
                         <div class="row mt-3">
                             <div class="col-12">
                                 <table id="tabla1" style="font-size:12px;">
