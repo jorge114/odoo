@@ -27,18 +27,17 @@ class ReportePersonalizado(models.Model):
         return MAY_direccion3
 
     def _direccion2_company(self):
-        direccion2 = str(
-            'C.P. ' + self.company_id.zip + ' ' + self.company_id.city + ', ' + self.company_id.state_id.name)
+        direccion2 = str('C.P. ') + str(self.company_id.zip) + ' ' + str(self.company_id.city) + ', ' + str(self.company_id.state_id.name)
         MAY_direccion2 = direccion2.upper()
         return MAY_direccion2
 
     def _RFC_company(self):
-        rfc = str('R.F.C.' + ' ' + self.company_id.vat)
+        rfc = str('R.F.C.') + ' ' + str(self.company_id.vat)
         MAY_rfc = rfc.upper()
         return MAY_rfc
 
     def _telefono_company(self):
-        telefono = str('+52 ' + ' ' + self.company_id.phone)
+        telefono = str('+52 ') + ' ' + str(self.company_id.phone)
         MAY_telefono = telefono.upper()
         return MAY_telefono
 
